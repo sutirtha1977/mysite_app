@@ -1,0 +1,30 @@
+<div class="page" id="offering">
+    <div class="container"> <!-- container -->
+        <div class="col-xs-10 col-xs-offset-1 section-header">
+            <h2 class="title-one"><span class="highlight"><strong>Offerings</strong></span></h2>
+            <h5><em>You will not regret!!</em></h5>
+        </div>
+    </div><!-- end container -->
+
+    <div class="gray-bg"> <!-- fullwidth gray background -->
+        <div class="container"><!-- container -->
+            <div id="process" class="row"> <!-- row -->
+                <% @all_categories.each do |category| %>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="media process"> <!-- Process #1 -->
+                        <div class="media-right media-middle hidden-xs">
+                            <%= image_tag(category.icon_path) %>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading text-danger"><%= category.name %></h3>
+                            <p><%= category.description %></p>
+                        </div>
+                    </div><!-- Process #1 -->                      
+                </div>
+                <% end %>
+            </div> <!-- end row -->
+        </div><!-- end container -->
+    </div>  <!-- end fullwidth gray background -->
+</div>
+
+

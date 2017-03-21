@@ -1,0 +1,59 @@
+<% if user_signed_in? %>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><%= current_user.email %></b> <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+			<li>
+				<%= link_to(edit_user_registration_path) do %>
+					<i class="fa fa-user-plus"></i> Edit account
+				<% end %>
+			</li>
+		  	<li>
+		  		<%= link_to(destroy_user_session_path, :method=>'delete') do %>
+		  			<i class="fa fa-sign-out"></i> Sign Out
+		  		<% end %>
+		  	</li>
+		</ul>
+	</li>
+<% else %>
+	<li><p class="navbar-text hidden-xs hidden-sm">Already have an account?</p></li>
+	<li class="dropdown">
+	  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+		<ul id="login-dp" class="dropdown-menu">
+			<li>
+				<div class="row">
+					<div class="col-md-12">
+						Login via
+						<div class="social-buttons">
+							<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+							<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+						</div>
+					    or
+						<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %> 
+							<div class="form-group">
+								 <label class="sr-only" for="inputEmail">Email address</label>
+								 <%= f.email_field(:email, class: "form-control", id: "inputEmail",placeholder: "Email address" , autofocus: true) %>
+							</div>
+							<div class="form-group">
+								 <label class="sr-only" for="inputPwd">Password</label>
+								 <%= f.password_field(:password, class: "form-control", id: "inputPwd", placeholder: "Password", autocomplete: "off") %>
+					             <div class="help-block text-right"><%= link_to "Forgot your password?", new_password_path(resource_name) %></div>
+							</div>
+							<div class="form-group">
+								<%= f.submit("Sign in", class: "btn btn-primary btn-block") %>
+							</div>
+							<div class="checkbox">
+								 <label>
+								 <%= f.check_box :remember_me %> keep me logged-in
+								 </label>
+							</div>
+
+						<% end %>
+					</div>
+					<div class="bottom text-center">
+						New here ? <%= link_to 'Join Us', new_user_registration_path %>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</li>  
+<% end %>

@@ -1,0 +1,19 @@
+<tr>
+  <td data-th="Product">
+    <h4 class="nomargin"><%= listing.name %></h4>
+    <p><%= listing.short_desc %></p>
+  </td>
+  <td data-th="Price"><%= number_to_currency(order_item.unit_price, :unit => "Rs. ") %></td>
+  <td data-th="Quantity" class="text-center"><%= order_item.quantity.to_i %></td>
+  <td data-th="Subtotal" class="text-center"><%= number_to_currency(order_item.total_price, :unit => "Rs. ") %></td>
+  <td class="actions" data-th="">
+<!--     <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button> -->
+  <%= link_to(order_item, method: :delete, remote: true, class: "btn btn-danger btn-sm") do %>
+    <i class="fa fa-trash-o"></i>
+  <% end %>               
+  </td>
+</tr>
+
+
+
+

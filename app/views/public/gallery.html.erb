@@ -1,0 +1,24 @@
+<% @images = Dir.glob(File.join(Rails.root, 'app', 'assets', 'images', 'gallery', '*.jpg')) %>
+
+<div class="page" id="photo">
+	<div class="container">
+		<div class="section-header">
+		    <h2 class="title-one">Check out <span class="highlight"><strong>photos</strong></span></h2>
+		</div>
+		<section class="gallery">
+			<% @images.each do |image| %>
+		    <article class="photo">		    	
+	            <figure>
+	            	<%= image_tag(File.join('gallery', image.split('/').last)) %>
+	                <figcaption><h2>Image <%= image.split('/').last %></h2></figcaption>
+	            </figure>
+		    </article>
+		    <% end %>
+		</section><!-- .gallery -->
+	</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,44 @@
+<div class="page" id="service">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="title-one">Services</h2>
+        </div>
+    	 <div class="text-center">
+    	    <ul class="list-inline cat-s"> 
+    	    	<li><a href="javascript:void(0)" data-filter="*" class="active">All</a></li>
+    	    	<% @services.each do |service| %>
+    	        <li><%= link_to service.name, "javascript:void(0)", "data-filter": "." + service.name.downcase %></li>
+    	        <% end %>
+    	    </ul>
+    	</div>
+    </div>
+    <div class="container">
+    	<div id="service-list" class="row">
+    		<% @listings_service.each do |service| %>
+            <div class="box col-xs-12 col-sm-6 col-md-3 <%= service.cat_name.downcase %>">
+                <div class="list-image">
+                    <%= images(service.image_loc, {class: "img-responsive"}, "listing") %>
+                    <h5><span><%= service.name %></span></h5>
+                    <p><span><i><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></i></span></p>
+                </div>
+                <div class="bottom">
+                    <!-- <a href="#" class="btn btn-success btn-xs">Book Now</a> -->
+                    <% if user_signed_in? %>
+                        <%= form_for @order_item, remote: true do |f| %>
+                            <%= f.hidden_field :listing_id, value: service.id %>
+                            <%= f.hidden_field :user_id, value: current_user.id %>
+                            <%= f.hidden_field :quantity, value: 1 %>
+                            <%= f.submit "Add to Cart", class: "btn btn-success btn-xs" %>
+                        
+                        <%= link_to "View Details", public_listing_detail_path(:id => service.id) , class: "btn btn-primary btn-xs pull-right" %>
+                        <% end %>
+                    <% else %>
+                        <%= link_to "View Details", public_listing_detail_path(:id => service.id) , class: "btn btn-primary btn-xs btn-block" %>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+    	</div>
+    </div>
+</div>
+

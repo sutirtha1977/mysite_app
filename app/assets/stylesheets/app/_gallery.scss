@@ -1,0 +1,77 @@
+#photo { 
+	.title-one {
+		color: #063642;
+	}
+	.gallery {
+		margin: 0 auto;
+		max-width: 80em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		transition: all .2s;
+		.photo {
+			box-sizing: border-box;
+			padding: 5px;
+			figure {
+				position: relative;
+				margin: 0;
+				overflow: hidden;
+				img {
+					display: block;
+					width: 100%;
+				}
+				figcaption {
+					position: absolute;
+					box-sizing: border-box;
+					bottom: -4em;
+					width: 100%;
+					padding: 0 1em;
+					background: hsla(0, 0%, 100%, .75);
+					transition: bottom .2s;
+					h2 {
+						font-size: 1.2em;
+						font-weight: lighter;
+					}
+				}
+			}
+			&:hover figcaption {
+				bottom: 0;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 40em) {
+	.photo {
+		width: 50%;
+	}
+	.double {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 60em) {
+	.photo {
+		width: 33%;
+	}
+	.double {
+		width: 66%;
+	}
+}
+
+@media screen and (min-width: 80em) {
+	.photo {
+		width: 25%;
+	}
+	.double {
+		width: 50%;
+	}
+}
+
+
+
+
+.photo a:hover figcaption {
+	bottom: 0;
+}
