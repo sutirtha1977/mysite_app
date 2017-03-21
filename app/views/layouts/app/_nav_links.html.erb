@@ -1,4 +1,3 @@
-<li><%= link_to 'Home', root_path %></li> <!-- home link -->
 <% if can? :manage, :all %>
 <li><%= link_to 'Admin', rails_admin_path %></li> <!-- admin link -->
 <% end %>

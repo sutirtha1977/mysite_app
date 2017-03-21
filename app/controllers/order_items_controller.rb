@@ -5,7 +5,6 @@ class OrderItemsController < ApplicationController
       @order_item = @order.order_items.new(order_item_params)
       @order.user_id = params[:order_item][:user_id]
       @order.save
-      session[:order_id] = @order.id
     end
   end
 
@@ -13,7 +12,14 @@ class OrderItemsController < ApplicationController
     @order = current_order
     @order_item = @order.order_items.find(params[:id])
     @order_item.destroy
-    @order_items = @order.order_items
+    if @order.order_items.count > 0 
+      @order_items = @order.order_items   
+      @order.save
+    else
+      @order_items = @order.order_items   
+      @order.destroy 
+    end
+      
   end
   
 private

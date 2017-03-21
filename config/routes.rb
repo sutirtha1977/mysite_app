@@ -20,23 +20,23 @@ Rails.application.routes.draw do
 
 	resources :order_items, only: [:create, :destroy]
 
-	resources :products do
-		member do
-	  		get :delete
-		end
-	end
+	# resources :products do
+	# 	member do
+	#   		get :delete, :show_in_app
+	# 	end
+	# end
 
-	resources :listings do
-		member do
-		  get :delete, :toggle_visible
-		end
-	end
+	# resources :listings do
+	# 	member do
+	# 	  get :delete, :show_in_app
+	# 	end
+	# end
 
-	resources :teams do
-		member do
-		  get :delete
-		end
-	end
+	# resources :teams do
+	# 	member do
+	# 	  get :delete
+	# 	end
+	# end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
