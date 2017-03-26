@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<%= controller_name %> <%= action_name %>">
+  <body>
   	<% unless flash.empty? %>
   	     <script type="text/javascript">
             <% flash.each do |f| %>
@@ -18,7 +18,8 @@
             <% end %>
   	     </script>
   	<% end %>
-    <%= render 'layouts/app/navigation' %> <!-- navigation -->
+    <%= render 'layouts/app/nav' %> <!-- navigation -->
+
     <div class="main">
       <% if devise_controller? %>
         <div class="fullheight" id="devise">

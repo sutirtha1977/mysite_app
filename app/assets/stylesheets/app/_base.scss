@@ -1,82 +1,21 @@
-html,body{
-    height: 100%
-}
-
 body {
   font: $mainFont;
-  position: relative;
-  color: $gray_2;
+  background: $backgroundColor;
+  color: $typeDefault;
 }
 
-h1 {
-    font-weight: $heavy;
-    text-transform: uppercase;
-    small { text-transform: lowercase }
-}
-h2 {
-    line-height: 24px;
-    font-weight: $thin;
+#{headings()} {
+ font: $headFont;
+ color: $headColor;
+ font-weight: $bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+strong {
+  font-weight: $bold;
 }
 
-h5 { font-size: 16px; }
-p { font-size: 14px; }
-
-a {
-    color: inherit;
-    transition: all 0.5s;
+p {
+  font-weight: $thin;
+  padding-bottom: 10px;
 }
 
-a:hover,
-a:focus {
-    text-decoration: none;
-    color: $yellow_1;
-}
-
-.highlight { color: $yellow_1 }
-
-.main {
-  padding-top: 50px;
-}
-
-.page {
-  padding: 20px 0;
-}
-
-.section-header {
-    padding: 40px 0;
-    text-align: center;
-}
-.section-header h2 { text-transform: uppercase }
-.section-header h5 { 
-  letter-spacing: 1px;
-  margin: 10px 0;
-}
-
-.title-one {
-  display: inline-block;
-  // font-size: 32px;
-  // font-weight: $bold;
-  padding-bottom:10px;
-  // text-align: center;
-  // text-transform: uppercase;
-  position:relative
-}
-.title-one:before {
-    color: $orange_3;
-    content: "||";
-    left: -40px;
-    position: absolute;
-    top: 0;
-}
-.title-one:after{
-    color: $orange_3;
-    content: "||";
-    position: absolute;
-    right: -40px;
-    top: -2px;
-}
-.gray-bg { background-color: $gray_4 }

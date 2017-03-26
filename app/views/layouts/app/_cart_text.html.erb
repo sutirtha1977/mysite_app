@@ -1,4 +1,3 @@
 <%= link_to(public_cart_path) do %>
-	<i class="fa fa-shopping-cart"></i> 
-	<%= "(" + current_order.order_items.size.to_s + ")" %>
+	<i class="fa fa-shopping-cart fa-fw"></i><span class="badge"><%= current_order.order_items.size.to_s %></span>
 <% end %>

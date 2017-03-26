@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+
+$narrow: 400px;
+$small: 768px;
+$medium: 992px;
+$wide: 1200px;
+
+//Add Color Palette
+$blue       : #063642;
+$green      : #45B29D;
+$yellow     : #EFC94C;
+$orange     : #E27A3F;
+$red        : #DF4848;
+$pink       : #CD0069;
+$purple     : #6C71C4;
+$dark       : #000000;
+$light      : #FFFFFF;
+
+$backgroundColor    : $light;
+$typeDefault        : $dark;
+$navBackground      : $blue;
+$navForeground      : $light;
+$navHover           : $yellow;
+$navBrandBg         : $red;
+$headersubbg        : $dark;
+
+//Font variables
+$fontfamily       : 'Roboto Slab', Helvetica, Arial, sans-serif;
+
+$thin     : 100;
+$normal   : 300;
+$bold     : 400;
+$heavy    : 700;
+
+$headFont   : $normal 1.5em/1.5em $fontfamily;
+$mainFont   : $normal 1em/1.5em $fontfamily;
+$headColor  : lighten($blue, 20);
