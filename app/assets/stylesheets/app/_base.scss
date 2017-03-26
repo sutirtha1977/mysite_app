@@ -1,7 +1,9 @@
 body {
   font: $mainFont;
-  background: $backgroundColor;
+  // background: $backgroundColor;
+  background: #CCCCCC;
   color: $typeDefault;
+  margin-top: 50px;
 }
 
 #{headings()} {
@@ -18,4 +20,102 @@ p {
   font-weight: $thin;
   padding-bottom: 10px;
 }
+
+.section-header {
+    padding: 40px 0;
+    text-align: center;
+}
+.section-header h2 { text-transform: uppercase }
+.section-header h5 { 
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.title-one {
+  display: inline-block;
+  // font-size: 32px;
+  // font-weight: $bold;
+  padding-bottom:10px;
+  // text-align: center;
+  // text-transform: uppercase;
+  position:relative
+}
+.title-one:before {
+    color: #fc7700;
+    content: "||";
+    left: -40px;
+    position: absolute;
+    top: 0;
+}
+.title-one:after{
+    color: #fc7700;
+    content: "||";
+    position: absolute;
+    right: -40px;
+    top: -2px;
+}
+
+.main {
+  background: #FFFFFF;
+  position: relative;
+  // z-index: 3;
+}
+
+.main-raised {
+  margin: -30px 30px 0px;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.modal {
+  .modal-content {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+    border: none;
+    .modal-header {
+      border-bottom: none;
+      padding-top: 24px;
+      padding-right: 24px;
+      padding-bottom: 0;
+      padding-left: 24px;
+      .close {
+        color: #555555;
+      }
+    }
+    .modal-body {
+      padding-top: 24px;
+      padding-right: 24px;
+      padding-bottom: 16px;
+      padding-left: 24px;
+    }
+    .modal-footer {
+      border-top: none;
+      padding: 7px;
+      .btn {
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: auto;
+        &.pull-left {
+          padding-left: 5px;
+          padding-right: 5px;
+          position: relative;
+          left: -5px;
+        }
+      }
+    }
+  }
+}
+
+.modal .modal-dialog {
+  margin-top: 100px;
+  z-index: 100;
+}
+
+// .modal .modal-header .close:hover, .modal .modal-header .close:focus {
+//   opacity: 1;
+//   color: #555555;
+// }
+// .modal-backdrop {
+//   background: rgba(0, 0, 0, 0);
+// }
 

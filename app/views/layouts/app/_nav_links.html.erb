@@ -1,6 +1,4 @@
 
-<li><%= link_to 'Home', root_path %></li> <!-- home link -->
-
 <% if !devise_controller? %>
 	<% if @services.count > 0 %>
 	<li class="dropdown">
@@ -24,4 +22,6 @@
 	</li>
 	<% end %> <!-- products link -->
 <% end %>
+<li><%= link_to 'Team', public_team_path %></li>
+<li><%= link_to 'Gallery', public_gallery_path %></li>
 

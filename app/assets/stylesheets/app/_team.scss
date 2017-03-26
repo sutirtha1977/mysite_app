@@ -1,0 +1,91 @@
+#team { 
+	.member {
+	  	margin: 10px 0;
+		h3 {
+		  font-weight: $bold;
+		  font-size: 1.2em;
+		  color: $dark;
+		  // padding-bottom: 5px;
+		}
+		h4 {
+			color: $dark;
+			font-size: 1em;
+			padding-bottom: 5px; 
+		}
+		p {
+		  font-size: .8em;
+		  font-weight: $normal;
+		}
+		img {
+			height: 100%;
+		  	width: 100%;
+		}
+	}
+	.socials i {
+		background-color:#fff;
+		border-radius: 50%;
+		color: #43484E;
+		display: inline-block;
+		font-size:16px;
+		height: 30px;
+		line-height:28px;
+		margin-right: 5px;
+		text-align: center;
+		width: 30px;
+		border-width:1px;
+		border-color:#43484E;
+		border-style: solid;
+		opacity:.5;
+		//  -webkit-transition: all 0.5s ease-in-out;
+		// -moz-transition: all 0.5s ease-in-out;
+		// -o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;  
+	}
+
+	a {
+		i:hover {
+			opacity:1;
+			color:#fff;
+			border:0
+		}
+		.fa-facebook:hover {
+			background: #3B5997;	
+		}
+
+		.fa-twitter:hover {
+		  background:#29C5F6
+		}
+
+		.fa-linkedin:hover {
+		  background:#006DC0
+		}
+
+		.fa-google:hover {
+		  background:#D13D2F
+		}
+
+	}
+
+	.btn {
+		box-shadow: 5px 5px 5px $dark;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

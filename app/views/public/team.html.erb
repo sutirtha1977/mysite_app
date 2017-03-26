@@ -24,7 +24,7 @@
     				</div>	              
                   <p><%= truncate(member.description, :length => 100) %></p>
 
-                  <a href="" class="btn btn-success btn-block" data-toggle="modal" data-target="#<%= member.id %>">Details ...</a>
+                  <a href="" class="btn btn-primary btn-block" data-toggle="modal" data-target="#<%= member.id %>">Details ...</a>
                 </div><!-- info -->
               </div> <!-- inner row -->
             </div> <!-- member -->
@@ -44,6 +44,7 @@
                     </div>
                 </div>
             </div>
+            
             <% if (index + 1) % 3 === 0 %>
             <div class="clearfix"></div>
             <% end %> <!-- add clearfix after every 3 element -->

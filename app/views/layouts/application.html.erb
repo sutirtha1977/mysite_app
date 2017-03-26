@@ -20,17 +20,22 @@
   	<% end %>
     <%= render 'layouts/app/nav' %> <!-- navigation -->
 
-    <div class="main">
+
       <% if devise_controller? %>
-        <div class="fullheight" id="devise">
-          <div class="row">
-              <%= yield %> <!-- main content -->
+        <div class="main">
+          <div class="fullheight" id="devise">
+            <div class="row">
+                <%= yield %> <!-- main content -->
+            </div>
           </div>
         </div>
       <% else %>
-        <%= yield %> <!-- main content -->
+        <div class="main main-raised">
+          <%= yield %> <!-- main content -->
+        </div>
       <% end %>
-    </div>
+      
+
     <%= render 'layouts/app/footer' %> <!-- footer -->
   </body>
 </html>
