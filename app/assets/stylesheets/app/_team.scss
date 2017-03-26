@@ -19,6 +19,7 @@
 		img {
 			height: 100%;
 		  	width: 100%;
+		  	@include shadow-z-5();
 		}
 	}
 	.socials i {
@@ -39,7 +40,8 @@
 		//  -webkit-transition: all 0.5s ease-in-out;
 		// -moz-transition: all 0.5s ease-in-out;
 		// -o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;  
+		transition: all 0.5s ease-in-out; 
+		@include shadow-z-3(); 
 	}
 
 	a {
@@ -67,7 +69,8 @@
 	}
 
 	.btn {
-		box-shadow: 5px 5px 5px $dark;
+		@include shadow-8dp-color($dark);
+		// box-shadow: 5px 5px 5px $dark;
 	}
 
 }

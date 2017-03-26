@@ -35,3 +35,8 @@ $heavy    : 700;
 $headFont   : $normal 1.5em/1.5em $fontfamily;
 $mainFont   : $normal 1em/1.5em $fontfamily;
 $headColor  : lighten($blue, 20);
+
+/* SHADOWS */
+$mdb-shadow-key-umbra-opacity: 0.2;
+$mdb-shadow-key-penumbra-opacity: 0.14;
+$mdb-shadow-ambient-shadow-opacity: 0.12;

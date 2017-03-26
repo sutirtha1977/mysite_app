@@ -65,7 +65,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/childrenhoroscope.jpg",
 	position: 1,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	featured: true
 	})
 
 product.listings.create({
@@ -80,7 +81,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/consultapandit.jpg",
 	position: 2,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	featured: true
 	})
 
 product.listings.create({
@@ -155,7 +157,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/litigationhoroscope.jpg",
 	position: 7,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	featured: true
 	})
 
 product.listings.create({
@@ -215,7 +218,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/palmistry.jpg",
 	position: 11,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	featured: true
 	})
 
 product.listings.create({
@@ -245,7 +249,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/varshphal.jpg",
 	position: 14,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	featured: true
 	})
 
 puts "Product 2"
@@ -270,7 +275,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/chowki.jpg",
 	position: 1 ,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	featured: true
 	})
 
 
@@ -310,7 +316,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/sacredthread.jpg",
 	position: 2,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	featured: true
 	})
 product.listings.create({
 	name: "Grihapravesh Ceremony",
@@ -352,7 +359,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/saraswatipuja.jpg",
 	position: 5,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	featured: true
 	})
 
 product.listings.create({
@@ -381,7 +389,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/kalipuja.jpg",
 	position: 7,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	featured: true
 	})
 product.listings.create({
 	name: "Durga Puja",
@@ -423,7 +432,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/satyanarayan.jpg",
 	position: 10,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	featured: true
 	})
 product.listings.create({
 	name: "Rudrashtadhyayi Path",
@@ -502,7 +512,8 @@ product.listings.create({
 	visible: true,
 	image_loc: "listings/industrialvastu.jpg",
 	position: 1 ,
-	curr_price: 100000.00
+	curr_price: 100000.00,
+	featured: true
 	})
 product.listings.create({
 	name: "Vastu For Home",

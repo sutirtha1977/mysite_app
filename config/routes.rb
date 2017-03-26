@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   	devise_for :users
 
 	get 'public/about'
+	get 'public/offering'
 	get 'public/team'
 	get 'public/listing'
 	get 'public/listing_detail'

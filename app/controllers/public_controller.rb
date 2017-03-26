@@ -8,7 +8,11 @@ class PublicController < ApplicationController
 	end
 
 	def about
-	  	@all_categories = Product.visible			
+	  	# @all_categories = Product.visible			
+	end
+
+	def offering
+		@all_categories = Product.visible	
 	end
 
 	def team
@@ -38,7 +42,7 @@ private
 		end
 	  	@products = Product.category_group('PRODUCT').visible
 	  	@services = Product.category_group('SERVICE').visible
-	  	@all_categories = Product.visible
+		# @all_categories = Product.visible
 	  	@listings_service = Listing.joins(:product)
 	  						.select('listings.*,products.name as cat_name')
 	  						.where(:listings => {:visible => true}, :products => {:visible => true, :category => 'SERVICE'})

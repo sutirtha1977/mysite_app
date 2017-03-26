@@ -47,7 +47,8 @@
 				    font-size: 1.5em;
 				}
 				&:hover, &:focus {
-				  color: $colHighlight; 
+				  // color: $colHighlight; 
+				  color: $light;
 				}
 		}
 

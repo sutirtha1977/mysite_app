@@ -1,44 +1,17 @@
 <div class="page" id="about">
     <div class="container">
-        <div class="row text-center">
-            <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="title-one">Welcome to the Site</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            </div>
+        <div class="section-header animated slideInDown">
+            <h2 class="title-one">Jai Shri <span class="highlight"><strong>Mahakal..</strong></span></h2>
+            <h3><span class="highlight h1">&#2384;</span></h3>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="our-service">
-                    <div class="services row">
-                        <% @all_categories.each do |category| %>
-                        <div class="col-sm-6 col-md-3">
-                            <div class="single-service">
-                                <%= image_tag(category.icon_path) %>
-                                <h2><%= category.name %></h2>
-                                <p><%= truncate(category.description, :length => 100) %></p>
-                                <a href="" class="btn btn-success btn-block" data-toggle="modal" data-target="#<%= category.id %>">Click to know ...</a>
-                            </div>
-                            <div class="modal fade" id="<%= category.id %>" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h2 class="text-primary"><%= category.name %></h2>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p><%= category.description %></p>
-                                        </div> 
-                                        <div class="modal-footer">
-                                          <%= link_to "Close", "#", class: "btn btn-secondary", data: {dismiss: "modal"} %>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
+    </div><!-- end container -->
+    <div class="container">
+        <div class="row animated zoomIn">
+            <p>We worship the three-eyed Lord Shiva, the essence that pervades all beings. Just as a ripened cucumber, Severs its bond with the creeper, May we too realize our divine nature and be liberated from the fear of death.</p>
+            <p>All of us who are born, must die. We do not know what lies ahead. Many of us are even not conscious of the fact that one day, our lives will end. Therefore let us live our lives with as much spiritual awareness as possible. All of mankind has the potential to lead rich lives filled with abundance, positive energy, happiness and well-being. We believe in the divinity of all beings. Our mission therefore, is to serve everyone, to help everybody sail smoothly over the turbulent seas of life and further their spiritual development. To this end, we have put up for you a variety of religious and spiritual services that you can easily access, no matter which part of the country you belong to.</p>
+            <p>Irrespective of age, gender, level of success or lack of it, everybody faces problems in day-to-day life and strongly desires to improve their life-situation regarding finance, health, employment, business, career, examinations, relationships or general well-being and prosperity. After all if one is not successful or is weighed down by problems, is it possible to be happy? No wonder most people are constantly struggling in life and working very hard to fulfil their dreams.</p>
+            <p>We are a team of experts backed with the knowledge and skills to help you gain freedom from most of your problems and attain success and happiness through japa, puja, havan and path. These remedies have worked wonders since centuries and continue to work miraculously even in today’s modern technological world. This is because they are timeless and too precious. Those who are fortunate to tap into them discover an inexhaustible reservoir of well-being and feel blessed indeed.</p>
+            <p>It is our earnest wish that you reap the benefits of the wonderful treasures of Hinduism. If you wish to undertake the prescribed remedies yourself, we will certainly guide you at every step. If owing to time or other constraints, you are unable to do it yourself, we will perform the prescribed solutions on your behalf so that you set off on the fast track to success.</p>
         </div>
     </div>
 </div>
