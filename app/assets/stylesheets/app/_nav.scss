@@ -3,6 +3,7 @@
 	$bgHighlight    : #df4848;
 	$colDefault     : #ecf0f1;
 	$colHighlight   : #efc94c;
+	$dropDown		: true;
 
 	.cart-text {
 		margin-right: 10px;
@@ -29,70 +30,84 @@
 
 	  	border-color: $bgHighlight;
 		.navbar-brand {
-		color: $colDefault;
-		font-weight: $normal;
-		font-family: $headFont;
-		text-align: center;
-		text-transform: uppercase;
-		// background: $navBrandBg;
-		a {
-		    color: $navForeground;
-		    text-decoration: none;
-		    text-align: center;
-		    display: inline-block;
-		    padding: 10px;
-		    font-size: 1.5em;
-		}
-		&:hover, &:focus {
-		  color: $colHighlight; }
+			// color: $colDefault;
+			color: $dark;
+			font-weight: $normal;
+			font-size: 1.5em;
+			font-family: $headFont;
+			text-align: center;
+			text-transform: uppercase;
+			// background: $navBrandBg;
+				a {
+				    color: $navForeground;
+				    text-decoration: none;
+				    text-align: center;
+				    display: inline-block;
+				    padding: 10px;
+				    font-size: 1.5em;
+				}
+				&:hover, &:focus {
+				  color: $colHighlight; 
+				}
 		}
 
 	  	.navbar-nav {
 		    > li {
+		    	// box-shadow: 1px 1px 1px 1px $dark;
 				> a {
-					color: $colDefault;
+					// color: $colDefault;
+					color: $dark;
+					// background-color: $bgHighlight;
+					background-color: lighten(#03a9f4, 20);
+					// margin-top: 5px;
+					margin-left: 10px;
+					// box-shadow: 1px 1px 1px 1px $dark;
 					&:hover,  &:focus {
-				  	color: $colHighlight; 
+				  		// color: $colHighlight; 
+				  		// color: $colDefault;
+				  		color: $dark;
 				  	}
 				}
-		      	// @if $dropDown {
-		       //  	> .dropdown-menu {
-		       //    		background-color: $bgDefault;
-		       //    		> li {
-				     //        > a {
-				     //          	color: $colDefault;
-				     //          	&:hover,  &:focus {
-				     //            // color: $colHighlight;
-				     //            // background-color: $bgHighlight; 
-				     //        	}
-				     //    	}
-				     //        > .divider {
-				     //          background-color: $bgHighlight;
-				     //      	}
-		       //    		}
-		       //   	}
-		       //   }
+		      	@if $dropDown {
+		        	> .dropdown-menu {
+		          		background-color: lighten(#03a9f4, 20);
+
+		          		> li {
+				            > a {
+				              	color: $colDefault;
+				              	&:hover,  &:focus {
+					                color: $colHighlight;
+					                background-color: $bgHighlight; 
+					                font-weight: $normal;
+				            	}
+				        	}
+				            > .divider {
+				              background-color: $bgHighlight;
+				          	}
+		          		}
+		         	}
+		         }
 		    }
-		   //  @if $dropDown {
-		   //    	.open .dropdown-menu > .active {
-		   //      	> a, > a:hover, > a:focus {
-		   //        		// color: $colHighlight;
-		   //        		// background-color: $bgHighlight; 
-		   //    		}
-		  	// 	}
-		  	// }
-		 //    > .active {
-		 //      	> a, > a:hover, > a:focus {
-		 //        	color: $colHighlight;
-		 //        	background-color: $bgHighlight; 
-		 //    	}
-			// }
-		 //    > .open {
-		 //      	> a, > a:hover, > a:focus {
-		 //        	color: $colHighlight;
-		 //        	background-color: $bgHighlight; 
-		 //    	}
-			// }
+		    @if $dropDown {
+		      	.open .dropdown-menu > .active {
+		        	> a, > a:hover, > a:focus {
+		          		color: $colHighlight;
+		          		background-color: $bgHighlight; 
+		      		}
+		  		}
+		  	}
+		    > .active {
+		      	> a, > a:hover, > a:focus {
+		        	color: $colHighlight;
+		        	background-color: $bgHighlight; 
+		    	}
+			}
+		    > .open {
+		      	> a, > a:hover, > a:focus {
+		        	color: $colHighlight;
+		        	background-color: $bgHighlight; 
+		    	}
+			}
 		}
 
 		.navbar-toggle {
