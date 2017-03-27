@@ -1,0 +1,197 @@
+<div class="page" id="category">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="title-one"><span class="highlight"><strong>Categories</strong></span></h2>
+        </div>
+    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="left-sidebar">
+					<h2>Category</h2>
+					<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						<% if @services.count > 0 %>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+										<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+										Services
+									</a>
+								</h4>
+							</div>
+							<div id="sportswear" class="panel-collapse collapse">
+								<div class="panel-body">
+									<ul class="cat-s">
+						    	    	<li><a href="javascript:void(0)" data-filter="*" class="active">All</a></li>
+						    	    	<% @services.each do |service| %>
+						    	        <li><%= link_to service.name, "javascript:void(0)", "data-filter": "." + service.name.downcase %></li>
+						    	        <% end %>
+									</ul>
+								</div>
+							</div>
+						<% end %>
+						<% if @products.count > 0 %>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+										<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+										Products
+									</a>
+								</h4>
+							</div>
+							<div id="sportswear" class="panel-collapse collapse">
+								<div class="panel-body">
+									<ul>
+						    	    	<li><a href="javascript:void(0)" data-filter="*" class="active">All</a></li>
+						    	    	<% @products.each do |product| %>
+						    	        <li><%= link_to product.name, "javascript:void(0)", "data-filter": "." + product.name.downcase %></li>
+						    	        <% end %>
+									</ul>
+								</div>
+							</div>
+						<% end %>
+						</div>
+					</div><!--/category-products-->
+				</div>
+			</div>
+			
+			<div class="col-sm-9 padding-right">
+				<div class="features_items"><!--features_items-->
+					<h2 class="title text-center">Features Items</h2>
+						<div id="service-list">
+							<% @listings_service.each do |service| %>
+							<div class="col-sm-4  <%= service.cat_name.downcase %>">
+								<div class="product-image-wrapper">
+									<div class="single-products">
+											<div class="productinfo text-center">
+												<%= images(service.image_loc, {class: "img-responsive"}, "listing") %>
+												<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
+												<p><%= service.name %></p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											<div class="product-overlay">
+												<div class="overlay-content">
+													<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
+													<p><%= service.name %></p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+											</div>
+									</div>
+									<div class="choose">
+										<ul class="nav nav-pills nav-justified">
+											<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
+											<li>
+												<%= link_to(public_listing_detail_path(:id => service.id)) do %>
+													<i class="fa fa-plus-square"></i>View Details</a>
+												<% end %>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<% end %>
+						</div>
+				</div><!--features_items-->
+				
+				<div class="recommended_items"><!--recommended_items-->
+					<h2 class="title text-center">recommended items</h2>
+					<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="item active">	
+								<div class="col-sm-4">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/recommend1.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/recommend2.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/recommend3.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">	
+								<div class="col-sm-4">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/recommend1.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/recommend2.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/recommend3.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						  </a>
+						  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						  </a>			
+					</div>
+				</div><!--/recommended_items-->
+				
+			</div>
+		</div>
+	</div>
+</div>

@@ -3,22 +3,13 @@
         <div class="section-header">
             <h2 class="title-one"><span class="highlight"><strong><%= @listing.first.product.name %></strong></span></h2>
         </div>
-        <div class="pull-left">
-			<ol class="breadcrumb">
-				<li>
-					<i class="fa fa-laptop"></i> <%= link_to "Home", root_path %>
-				</li>
-					<li><i class="fa fa-th-list"></i> <%= @listing.first.product.name %>
-				</li>                
-			</ol>
-        </div>
     </div>
     <div class="container">
 		<div id="listing-list" class="row">
 			<% @listing.each do |list| %>
 	        <div class="box col-xs-12 col-sm-6 col-md-3">
 	            <div class="list-image">
-	                <%= images(list.image_loc, {class: "img-responsive"}, "listing") %>
+	                <%= images(list.image_loc, {class: "img-responsive", height: "300px", width: "300px"}, "listing") %>
 	                <h5><span><%= list.name %></span></h5>
 	                <p><span><i><%= number_to_currency(list.curr_price, :unit => "Rs. ") %></i></span></p>
 	            </div>
