@@ -128,3 +128,15 @@ p {
 //   background: rgba(0, 0, 0, 0);
 // }
 
+a#scrollUp {
+  bottom: 60px;
+  right: 20px;
+  background-color: #03a9f4;
+  color: $light;
+  padding: 5px 10px;
+}
+ 
+a#scrollUp i{
+  font-size: 2em;
+}
+

@@ -17,5 +17,6 @@
 //= require toastr
 //= require isotope.pkgd.min
 //= require imagesloaded.pkgd.min
+//= require jquery.scrollUp.min
 //= require app_func
 
