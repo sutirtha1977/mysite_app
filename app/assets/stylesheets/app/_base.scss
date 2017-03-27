@@ -4,7 +4,10 @@ body {
   background: #CCCCCC;
   color: $typeDefault;
   margin-top: 50px;
+  margin-bottom: 60px;
+  // height:100%;
 }
+
 
 #{headings()} {
  font: $headFont;
