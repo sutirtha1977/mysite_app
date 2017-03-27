@@ -1,4 +1,107 @@
 #offering {
+	.card {
+	    display: inline-block;
+	    position: relative;
+	    width: 100%;
+	    min-height: 400px;
+	    @include shadow-2dp();
+	    margin-bottom: 20px;
+	    border-radius: 3px;
+  		color: rgba(0,0,0, 0.87);
+  		background: #fff;
+  
+	    .header{
+	        @include shadow-big();
+	        margin: 15px;
+	        border-radius: 3px;
+	        padding: 15px 0;
+	        background-color: $light;
+	    }
+		.header-primary {
+		  background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+		}
+		.header-info {
+		  background: linear-gradient(60deg, #29b6f6, #0288d1);
+		}
+		.header-success {
+		  background: linear-gradient(60deg, #66bb6a, #388e3c);
+		}
+		.header-warning {
+		  background: linear-gradient(60deg, #fdd835, #fbc02d);
+		}
+		.header-danger {
+		  background: linear-gradient(60deg, #ef5350, #d32f2f);
+		}
+		[class*="header-"] {
+		  color: #FFFFFF;
+		}
+		.content{
+	        padding: 20px;
+	        p {
+	        	font-weight: $normal;
+	        }
+	    }
+	}
 
+	.card-nav-tabs{
+	    margin-top: 45px;
+
+	    .header{
+	        margin-top: -30px;
+	    }
+		.nav-tabs {
+		    background: transparent;
+		    border: 0;
+		    border-radius: 3px;
+		    padding: 0 15px;
+
+		    > li {
+		        > a {
+		            color: #FFFFFF;
+		            border: 0;
+		            margin: 0;
+
+		            border-radius: 3px;
+
+		            line-height: 24px;
+		            text-transform: uppercase;
+		            font-size: 12px;
+		            img {
+		            	vertical-align: middle;
+		            }
+		            // span {
+		            // 	font-size: 1.1em;
+		            // }
+
+		            &:hover {
+		                background-color: transparent;
+		                border: 0;
+		            }
+		        }
+		        & > a,
+		        & > a:hover,
+		        & > a:focus {
+		            background-color: transparent;
+		            border: 0 !important;
+		            color: #FFFFFF !important;
+		            font-size: 1.1em;
+		        }
+		        &.disabled > a,
+		        &.disabled > a:hover {
+		            color: rgba(255,255,255,0.5);
+		        }
+		    }
+
+		    >li.active{
+		        & > a,
+		        & > a:hover,
+		        & > a:focus {
+		            background-color: rgba(255,255,255, .2);
+		            transition: background-color .1s .2s;
+		        }
+		    }
+
+		}
+	}
 
 }

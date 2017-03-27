@@ -1,19 +1,43 @@
 <div class="page" id="offering">
+
     <div class="container">
-        <div class="section-header animated slideInDown">
+        <div class="section-header">
             <h2 class="title-one">Our <span class="highlight"><strong>Offerings</strong></span></h2>
         </div>
     </div>
-
     <div class="container">
     	<div class="row">
-
+			<div class="card card-nav-tabs animated zoomIn">
+				<div class="header header-info">
+					<!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+					<div class="nav-tabs-navigation">
+						<div class="nav-tabs-wrapper">	
+							<ul class="nav nav-tabs" data-tabs="tabs">
+								<% @all_categories.each.with_index do |category, index| %>
+								<li class="<%= index === 0 ? 'active' : '' %>">
+									<a href="#<%= index %>" data-toggle="tab">
+										<%= image_tag(category.icon_path, size: "20x20") %> 
+										<span class="hidden-xs hidden-sm"><%= category.name %></span>
+									</a>
+								</li>
+								<% end %>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="tab-content text-center">
+						<% @all_categories.each.with_index do |category, index| %>
+						<div class="tab-pane <%= index === 0 ? 'active' : '' %>" id="<%= index %>">
+							<p><%= category.description %></p>
+						</div>
+						<% end %>
+					</div>
+				</div>
+				
+			</div>
     	</div>	
     </div>
-
-
-
-
 </div>
 
 

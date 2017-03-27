@@ -58,11 +58,6 @@ p {
     top: -2px;
 }
 
-@media (max-width: 767px) {
-  .title-one {
-    font-size: 1.5em;
-  }
-}
 
 .main {
   background: #FFFFFF;
@@ -120,6 +115,18 @@ p {
   z-index: 100;
 }
 
+@media (max-width: 767px) {
+  .title-one {
+    font-size: 1.5em;
+  }
+  .main-raised {
+    margin: 0px;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 20px;
+  }
+}
+
 // .modal .modal-header .close:hover, .modal .modal-header .close:focus {
 //   opacity: 1;
 //   color: #555555;
@@ -134,6 +141,7 @@ a#scrollUp {
   background-color: #03a9f4;
   color: $light;
   padding: 5px 10px;
+  @include big-shadow();
 }
  
 a#scrollUp i{
