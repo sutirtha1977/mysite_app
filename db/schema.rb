@@ -14,18 +14,19 @@ ActiveRecord::Schema.define(version: 20170321180002) do
 
   create_table "listings", force: :cascade do |t|
     t.integer  "product_id"
-    t.string   "name",                                                null: false
+    t.string   "name",                                                 null: false
     t.string   "short_desc"
     t.text     "long_desc"
-    t.boolean  "visible",                             default: false
-    t.decimal  "orig_price", precision: 12, scale: 2, default: "0.0"
-    t.decimal  "curr_price", precision: 12, scale: 2, default: "0.0"
+    t.boolean  "visible",                              default: false
+    t.decimal  "orig_price",  precision: 12, scale: 2, default: "0.0"
+    t.decimal  "curr_price",  precision: 12, scale: 2, default: "0.0"
     t.string   "image_loc"
     t.integer  "position"
-    t.boolean  "featured",                            default: false
-    t.boolean  "new",                                 default: false
-    t.datetime "created_at",                                          null: false
-    t.datetime "updated_at",                                          null: false
+    t.boolean  "featured",                             default: false
+    t.boolean  "new",                                  default: false
+    t.boolean  "recommended",                          default: false
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
     t.index ["product_id"], name: "index_listings_on_product_id"
   end
 

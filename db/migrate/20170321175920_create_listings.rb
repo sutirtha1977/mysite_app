@@ -12,6 +12,7 @@ class CreateListings < ActiveRecord::Migration[5.0]
 		t.integer 	:position
 		t.boolean 	:featured, default: false
 		t.boolean 	:new, default: false
+		t.boolean 	:recommended, default: false
 		t.timestamps
     end
     add_index(:listings, :product_id)

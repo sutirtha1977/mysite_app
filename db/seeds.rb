@@ -66,38 +66,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	image_loc: "listings/childrenhoroscope.jpg",
 	position: 1,
 	curr_price: 1000.00,
-	featured: true
-	})
-
-product.listings.create({
-	name: "Fame And Fortune Horoscope",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/consultapandit.jpg",
-	position: 2,
-	curr_price: 1000.00,
-	featured: true
-	})
-
-product.listings.create({
-	name: "Family And Relations Horoscope",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/familyandrelationshoroscope.jpg",
-	position: 3,
-	curr_price: 1000.00
+	featured: true,
+	recommended: true
 	})
 
 product.listings.create({
@@ -112,7 +82,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/fullvedichoroscopepackage.jpg",
 	position: 4,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	recommended: true
 	})
 
 product.listings.create({
@@ -127,7 +98,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/gemstoneconsultation.jpg",
 	position: 5,
-	curr_price: 1000.00
+	curr_price: 1000.00,
+	featured: true
 	})
 
 product.listings.create({
@@ -143,22 +115,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	image_loc: "listings/healthhoroscope.jpg",
 	position: 6,
 	curr_price: 1000.00
-	})
-
-product.listings.create({
-	name: "Litigation Horoscope",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/litigationhoroscope.jpg",
-	position: 7,
-	curr_price: 1000.00,
-	featured: true
 	})
 
 product.listings.create({
@@ -191,20 +147,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	curr_price: 1000.00
 	})
 
-product.listings.create({
-	name: "Numerology",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/numerology.jpg",
-	position: 10,
-	curr_price: 1000.00
-	})
+
 
 product.listings.create({
 	name: "Palmistry",
@@ -222,20 +165,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	featured: true
 	})
 
-product.listings.create({
-	name: "Property Horoscope",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/propertyhoroscope.jpg",
-	position: 12,
-	curr_price: 1000.00
-	})
+
 
 product.listings.create({
 	name: "Varshphal",
@@ -276,7 +206,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	image_loc: "listings/chowki.jpg",
 	position: 1 ,
 	curr_price: 10000.00,
-	featured: true
+	featured: true,
+	recommended: true
 	})
 
 
@@ -304,21 +235,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	curr_price: 10000.00
 	})
 
-product.listings.create({
-	name: "Sacred Thread(Upanayan) Ceremony",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/sacredthread.jpg",
-	position: 2,
-	curr_price: 10000.00,
-	featured: true
-	})
+
 product.listings.create({
 	name: "Grihapravesh Ceremony",
 	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
@@ -331,7 +248,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/grihapravesh.jpg",
 	position: 3,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	featured: true,
+	recommended: true
 	})
 product.listings.create({
 	name: "Marriage Ceremony",
@@ -345,7 +264,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/marriage.jpg",
 	position: 4,
-	curr_price: 10000.00
+	curr_price: 10000.00,
+	recommended: true
 	})
 product.listings.create({
 	name: "Saraswati Puja",
@@ -406,49 +326,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	position: 8,
 	curr_price: 10000.00
 	})
-product.listings.create({
-	name: "Lakshmi Narayan Puja",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/lakshminarayanpuja.jpg",
-	position: 9,
-	curr_price: 10000.00
-	})
-product.listings.create({
-	name: "Satyanarayan Puja and Path",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/satyanarayan.jpg",
-	position: 10,
-	curr_price: 10000.00,
-	featured: true
-	})
-product.listings.create({
-	name: "Rudrashtadhyayi Path",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/rudrashtadhyayi.jpg",
-	position: 11,
-	curr_price: 10000.00
-	})
+
 product.listings.create({
 	name: "Bhagwad Gita Path",
 	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
@@ -463,34 +341,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	position: 12,
 	curr_price: 10000.00
 	})
-product.listings.create({
-	name: "DurgaSaptashati Path",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/durgasaptashati.jpg",
-	position: 13,
-	curr_price: 10000.00
-	})
-product.listings.create({
-	name: "Vishnu SahasranaamStotram Path and Puja",
-	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	visible: true,
-	image_loc: "listings/vishnupath.jpg",
-	position: 14,
-	curr_price: 10000.00
-	})
+
 
 
 puts "Product 4"
@@ -502,19 +353,27 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-	:category => "SERVICE" ,
+	:category => "PRODUCT" ,
 	icon_path: "icons/icon5.svg",
 	:visible => true,
 	position: 4)
+
 product.listings.create({
 	name: "Industrial Vastu",
-	short_desc: "Industrial Vaastu is the science of designing industries or factory areas according to the principles of Vaastu Shastra. Industries with Vaastu Defects may suffer from unexplained losses and difficulties. Industrial Vaastu remedies these defects and facilitates the movement of labour, raw materials, work in progress and finished goods according to Vaastu guidelines, thereby facilitating harmony and energising properties in the industry or factory area.", 
+	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
 	visible: true,
 	image_loc: "listings/industrialvastu.jpg",
-	position: 1 ,
+	position: 1,
 	curr_price: 100000.00,
-	featured: true
+	recommended: true
 	})
+
 product.listings.create({
 	name: "Vastu For Home",
 	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
@@ -527,7 +386,57 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 	visible: true,
 	image_loc: "listings/vastuforhome.jpg",
 	position: 2,
-	curr_price: 100000.00
+	curr_price: 100000.00,
+	featured: true,
+	recommended: true
+	})
+
+
+puts "Product 5"
+product = Product.create(
+	:name => "Gemstone" , 
+	:description => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+	:category => "PRODUCT" ,
+	icon_path: "icons/icon6.svg",
+	:visible => true,
+	position: 4)
+
+product.listings.create({
+	name: "Diamond",
+	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+	visible: true,
+	image_loc: "listings/vastuforhome.jpg",
+	position: 2,
+	curr_price: 100000.00,
+	featured: true,
+	recommended: true
+	})
+product.listings.create({
+	name: "Coral",
+	short_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+	long_desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+	visible: true,
+	image_loc: "listings/vastuforhome.jpg",
+	position: 2,
+	curr_price: 100000.00,
+	featured: true,
+	recommended: true
 	})
 
 puts "Creating Product END"
