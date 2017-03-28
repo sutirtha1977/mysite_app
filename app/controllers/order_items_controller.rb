@@ -1,7 +1,9 @@
 class OrderItemsController < ApplicationController
   def create
     @order = current_order
-    if !@order.order_items.where(listing_id: params[:order_item][:listing_id]).exists?
+    if @order.order_items.where(listing_id: params[:order_item][:listing_id]).exists?
+      @order.order_items.where(listing_id: params[:order_item][:listing_id]).first.increment!(:quantity)
+    else
       @order_item = @order.order_items.new(order_item_params)
       @order.user_id = params[:order_item][:user_id]
       @order.save
