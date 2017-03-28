@@ -50,14 +50,12 @@ ActiveRecord::Schema.define(version: 20170321180002) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
-    t.decimal  "subtotal",        precision: 12, scale: 2
-    t.decimal  "tax",             precision: 12, scale: 2
-    t.decimal  "shipping",        precision: 12, scale: 2
-    t.decimal  "total",           precision: 12, scale: 2
-    t.integer  "order_status_id"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
+    t.decimal  "subtotal",   precision: 12, scale: 2
+    t.decimal  "tax",        precision: 12, scale: 2
+    t.decimal  "shipping",   precision: 12, scale: 2
+    t.decimal  "total",      precision: 12, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
