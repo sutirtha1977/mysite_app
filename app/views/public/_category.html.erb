@@ -1,7 +1,7 @@
 <div class="page" id="category">
     <div class="container">
         <div class="section-header">
-            <h2 class="title-one"><span class="highlight"><strong>Categories</strong></span></h2>
+            <h2 class="title-one">All <span class="highlight"><strong>Categories</strong></span></h2>
         </div>
     </div>
 	<div class="container">
@@ -69,13 +69,30 @@
 										<%= images(service.image_loc, {class: "img-responsive"}, "listing") %>
 										<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
 										<p><%= service.name %></p>
+										<% if user_signed_in? %>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<% else %>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
+										<% end %>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
 											<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
 											<p><%= service.name %></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<% if user_signed_in? %>
+						                        <%= form_for @order_item, remote: true do |f| %>
+						                            <%= f.hidden_field :listing_id, value: service.id %>
+						                            <%= f.hidden_field :user_id, value: current_user.id %>
+						                            <%= f.hidden_field :quantity, value: 1 %>
+													<%= button_tag( :class => "btn btn-default add-to-cart") do %>
+													  <i class="fa fa-shopping-cart"></i>Add to cart
+													<% end %>
+						                        <% end %>
+											<% else %>
+												<%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
+													<i class="fa fa-sign-in"></i>Please login
+												<% end %>
+											<% end %>
 										</div>
 									</div>
 								</div>
@@ -103,13 +120,30 @@
 										<%= images(product.image_loc, {class: "img-responsive"}, "listing") %>
 										<h2><%= number_to_currency(product.curr_price, :unit => "Rs. ") %></h2>
 										<p><%= product.name %></p>
+										<% if user_signed_in? %>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<% else %>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
+										<% end %>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
 											<h2><%= number_to_currency(product.curr_price, :unit => "Rs. ") %></h2>
 											<p><%= product.name %></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<% if user_signed_in? %>
+						                        <%= form_for @order_item, remote: true do |f| %>
+						                            <%= f.hidden_field :listing_id, value: product.id %>
+						                            <%= f.hidden_field :user_id, value: current_user.id %>
+						                            <%= f.hidden_field :quantity, value: 1 %>
+													<%= button_tag( :class => "btn btn-default add-to-cart") do %>
+													  <i class="fa fa-shopping-cart"></i>Add to cart
+													<% end %>
+						                        <% end %>
+											<% else %>
+												<%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
+													<i class="fa fa-sign-in"></i>Please login
+												<% end %>
+											<% end %>
 										</div>
 									</div>
 								</div>
