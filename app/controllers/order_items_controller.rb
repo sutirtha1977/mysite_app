@@ -3,10 +3,12 @@ class OrderItemsController < ApplicationController
     @order = current_order
     if @order.order_items.where(listing_id: params[:order_item][:listing_id]).exists?
       @order.order_items.where(listing_id: params[:order_item][:listing_id]).first.increment!(:quantity)
+      # flash[:notice] = 'Updated quantity.'
     else
       @order_item = @order.order_items.new(order_item_params)
       @order.user_id = params[:order_item][:user_id]
       @order.save
+      # flash[:notice] = 'New items added to cart.'
     end
   end
 
@@ -21,7 +23,7 @@ class OrderItemsController < ApplicationController
       @order_items = @order.order_items   
       @order.destroy 
     end
-      
+     
   end
   
 private

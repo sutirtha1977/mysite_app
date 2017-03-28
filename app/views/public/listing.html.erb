@@ -1,4 +1,4 @@
-<div class="page" id="category">
+<div class="page listing" id="category">
     <div class="container">
         <div class="section-header">
             <h2 class="title-one"><span class="highlight"><strong><%= @listing.first.product.name %></strong></span></h2>
@@ -8,7 +8,6 @@
         <div class="row">
             <div class="col-sm-12 padding-right">
                 <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Services</h2>
                     <% @listing.each do |list| %>
                     <div class="col-sm-3">
                         <div class="product-image-wrapper">

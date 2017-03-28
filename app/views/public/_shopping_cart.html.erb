@@ -5,51 +5,28 @@
 </div>
 
 <div class="container">
-  <% if !@order_item.nil? && @order_item.errors.any? %>
-    <div class="alert alert-danger">
-      <ul>
-      <% @order_item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <% if @order_items.size == 0 %>
-    <p class="text-center h4">
-      There are no items in your shopping cart.  Please <%= link_to "go back", root_path, class: "text-danger" %> and add some items to your cart.
-    </p>
-  <% else %>
-
-      <table id="cart" class="table table-hover table-condensed">
-        <thead>
-          <tr class="h3">
-            <th style="width:50%"><span class="highlight"><strong>Product</strong></span></th>
-            <th style="width:10%"><span class="highlight"><strong>Price</strong></span></th>
-            <th style="width:8%"><span class="highlight"><strong>Quantity</strong></span></th>
-            <th style="width:22%" class="text-center"><span class="highlight"><strong>Subtotal</strong></span></th>
-            <th style="width:10%"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @order_items.each do |order_item| %>
-            <%= render 'public/cart_row', listing: order_item.listing, order_item: order_item, show_total: true %>
-           <% end %>
-        </tbody>
-        <tfoot>
-          <tr class="visible-xs">
-            <td class="text-center"><span class="highlight h4">Total: </span><strong><%= number_to_currency(@order.subtotal, :unit => "Rs. ") %></strong></td>
-          </tr>
-          <tr>
-            <td>
-              <%= link_to(root_path, class: "btn btn-warning") do %>
-                <i class="fa fa-angle-left"></i> Continue Shopping
-              <% end %>
-            </td>
-            <td colspan="2" class="hidden-xs"></td>
-            <td class="hidden-xs text-center"><span class="highlight h4">Total: </span><strong><%= number_to_currency(@order.subtotal, :unit => "Rs. ") %></strong></td>
-            <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
-          </tr>
-        </tfoot>
-      </table>
-  <% end %>
+  <div class="row">
+    <% if @order_items.size == 0 %>
+      <p class="text-center h4">
+        There are no items in your shopping cart.  Please <%= link_to "go back", root_path, class: "text-danger" %> and add some items to your cart.
+      </p>
+    <% else %>
+    <table class="table table-condensed table-advance" id="dataTables-cart">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th class="text-center"><i class="fa fa-wrench"></i></th>
+        </tr>                           
+      </thead>
+      <tbody class="cart-index">
+        <% @order_items.each do |order_item| %>
+          <%= render 'public/cart_row', listing: order_item.listing, order_item: order_item, show_total: true %>
+         <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
 </div>
