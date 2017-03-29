@@ -3,6 +3,11 @@ $(function() {
 
     var topoffset = 52; 
 
+    $('.navbar-brand').click(function(e) {
+        e.preventDefault();
+
+        location.reload();
+    });
 
     $(document).on('turbolinks:load', function() {
         /************************************ 

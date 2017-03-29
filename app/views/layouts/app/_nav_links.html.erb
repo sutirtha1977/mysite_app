@@ -5,7 +5,7 @@
 	  <a href="#service" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></a>
 	  <ul class="dropdown-menu">
 	    <% @services.each do |service| %>
-	      <li><%= link_to service.name, listing_public_index_path(:product_id => service.id) %></li>
+	      <li><%= link_to service.name, listing_public_index_path(:product_id => service.id), remote: true %></li>
 	    <% end %>
 	  </ul>
 	</li>
@@ -16,7 +16,7 @@
 	  <a href="#product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
 	  <ul class="dropdown-menu">
 	    <% @products.each do |product| %>
-	    <li><%= link_to product.name, listing_public_index_path(:product_id => product.id) %></li>
+	    <li><%= link_to product.name, listing_public_index_path(:product_id => product.id), remote: true %></li>
 	    <% end %>
 	  </ul>
 	</li>
