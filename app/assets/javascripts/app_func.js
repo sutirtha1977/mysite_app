@@ -1,22 +1,7 @@
 $(function() {  
+    'use strict'
 
     var topoffset = 52; 
-        /************************************ 
-        dataTables-cart responsive start 
-        ************************************/
-        // $('#dataTables-cart').DataTable({
-        //     responsive: true,
-        //     "columns": [
-        //         null,
-        //         null,
-        //         null,
-        //         null,
-        //         { "orderable": false }
-        //     ]
-        // });
-        /************************************ 
-        dataTables-cart responsive end 
-        ************************************/
 
 
     $(document).on('turbolinks:load', function() {
@@ -32,38 +17,38 @@ $(function() {
         make menus drop automatically end 
         ************************************/
 
-        /************************************ 
-        dataTables-cart responsive start 
-        ************************************/
-        $('#dataTables-cart').DataTable({
-            responsive: true,
-            "columns": [
-                null,
-                null,
-                null,
-                null,
-                { "orderable": false }
-            ]
-        });
-        /************************************ 
-        dataTables-cart responsive end 
-        ************************************/
+        // /************************************ 
+        // dataTables-cart responsive start 
+        // ************************************/
+        // $('#dataTables-cart').DataTable({
+        //     responsive: true,
+        //     "columns": [
+        //         null,
+        //         null,
+        //         null,
+        //         null,
+        //         { "orderable": false }
+        //     ]
+        // });
+        // /************************************ 
+        // dataTables-cart responsive end 
+        // ************************************/
 
-        /************************************ 
-        isotope gallery start 
-        ************************************/
-        var $gallery = $('.gallery').isotope({
-          // options
-          itemSelector: '.photo',
-          layoutMode: 'masonry'
-        });
+        // /************************************ 
+        // isotope gallery start 
+        // ************************************/
+        // var $gallery = $('.gallery').isotope({
+        //   // options
+        //   itemSelector: '.photo',
+        //   layoutMode: 'masonry'
+        // });
 
-        $gallery.imagesLoaded().progress( function() {
-            $gallery.isotope('layout');
-        })
-        /************************************ 
-        isotope gallery end 
-        ************************************/
+        // $gallery.imagesLoaded().progress( function() {
+        //     $gallery.isotope('layout');
+        // })
+        // /************************************ 
+        // isotope gallery end 
+        // ************************************/
         /************************************ 
         isotope services start 
         ************************************/

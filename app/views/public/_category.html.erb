@@ -100,7 +100,7 @@
 									<ul class="nav nav-pills nav-justified">
 										<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
 										<li>
-											<%= link_to(public_listing_detail_path(:id => service.id)) do %>
+											<%= link_to(listing_detail_public_index_path(:id => service.id)) do %>
 												<i class="fa fa-plus-square"></i>View Details</a>
 											<% end %>
 										</li>
@@ -151,7 +151,7 @@
 									<ul class="nav nav-pills nav-justified">
 										<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
 										<li>
-											<%= link_to(public_listing_detail_path(:id => product.id)) do %>
+											<%= link_to(listing_detail_public_index_path(:id => product.id)) do %>
 												<i class="fa fa-plus-square"></i>View Details</a>
 											<% end %>
 										</li>

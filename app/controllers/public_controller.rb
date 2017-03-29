@@ -16,7 +16,7 @@ class PublicController < ApplicationController
 	end
 
 	def team
-	  	@teams = Team.sort_pos		
+	  	@teams = Team.sort_pos
 	end
 
 	def listing

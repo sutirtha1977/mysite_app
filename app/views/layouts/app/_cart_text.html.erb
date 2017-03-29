@@ -1,3 +1,3 @@
-<%= link_to(public_cart_path) do %>
+<%= link_to(cart_public_index_path, remote: true) do %>
 	<i class="fa fa-shopping-cart fa-fw"></i><span class="badge"><%= current_order.order_items.size.to_s %></span>
 <% end %>

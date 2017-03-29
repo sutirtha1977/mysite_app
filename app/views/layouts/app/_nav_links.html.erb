@@ -5,7 +5,7 @@
 	  <a href="#service" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></a>
 	  <ul class="dropdown-menu">
 	    <% @services.each do |service| %>
-	      <li><%= link_to service.name, public_listing_path(:product_id => service.id) %></li>
+	      <li><%= link_to service.name, listing_public_index_path(:product_id => service.id) %></li>
 	    <% end %>
 	  </ul>
 	</li>
@@ -16,14 +16,15 @@
 	  <a href="#product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
 	  <ul class="dropdown-menu">
 	    <% @products.each do |product| %>
-	    <li><%= link_to product.name, public_listing_path(:product_id => product.id) %></li>
+	    <li><%= link_to product.name, listing_public_index_path(:product_id => product.id) %></li>
 	    <% end %>
 	  </ul>
 	</li>
 	<% end %> <!-- products link -->
 <% end %>
-<li><%= link_to 'About', public_about_path %></li>
-<li><%= link_to 'Offerings', public_offering_path %></li>
-<li><%= link_to 'Team', public_team_path %></li>
-<li><%= link_to 'Gallery', public_gallery_path %></li>
+<li><%= link_to 'About', public_about_path, remote: true %></li>
+<li><%= link_to 'Offerings', offering_public_index_path, remote: true %></li>
+<li><%= link_to 'Team', team_public_index_path, remote: true  %></li>
+<li><%= link_to 'Gallery', gallery_public_index_path, remote: true %></li>
+
 

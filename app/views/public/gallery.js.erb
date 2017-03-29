@@ -1,0 +1,16 @@
+$(".main").html("<%= j (render 'public/gallery') %>")
+/************************************ 
+isotope gallery start 
+************************************/
+var $gallery = $('.gallery').isotope({
+  // options
+  itemSelector: '.photo',
+  layoutMode: 'masonry'
+});
+
+$gallery.imagesLoaded().progress( function() {
+    $gallery.isotope('layout');
+})
+/************************************ 
+isotope gallery end 
+************************************/

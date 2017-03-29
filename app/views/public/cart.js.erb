@@ -1,0 +1,17 @@
+$(".main").html("<%= j (render 'public/cart') %>")
+/************************************ 
+dataTables-cart responsive start 
+************************************/
+$('#dataTables-cart').DataTable({
+    responsive: true,
+    "columns": [
+        null,
+        null,
+        null,
+        null,
+        { "orderable": false }
+    ]
+});
+/************************************ 
+dataTables-cart responsive end 
+************************************/
