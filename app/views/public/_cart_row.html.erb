@@ -1,7 +1,8 @@
+<% @order_items.each do |order_item| %>
 <tr>
   <td>
-    <%= listing.name %>
-    <p><%= listing.short_desc %></p>
+    <%= order_item.listing.name %>
+    <p><%= order_item.listing.short_desc %></p>
   </td>
   <td><%= number_to_currency(order_item.unit_price, :unit => "Rs. ") %></td>
   <td><%= order_item.quantity.to_i %></td>
@@ -12,6 +13,7 @@
     <% end %>               
   </td>
 </tr>
+<% end %>
 
 
 

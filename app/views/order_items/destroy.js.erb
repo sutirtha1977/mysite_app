@@ -1,8 +1,4 @@
 $(".cart-text").html("<%= j (render 'layouts/app/cart_text') %>")
-$(".shopping-cart").html("<%= j (render 'public/shopping_cart') %>")
+$(".cart-index").html("<%= j (render 'public/cart_row') %>")
 
-var test = "<% @order_items.each do |order_item| %>"
-test += "<%= render 'public/cart_row', listing: order_item.listing, order_item: order_item, show_total: true %>"
-test += "<% end %>"
 
-console.log('<%= @test %>');

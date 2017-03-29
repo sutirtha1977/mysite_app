@@ -22,9 +22,7 @@
         </tr>                           
       </thead>
       <tbody class="cart-index">
-        <% @order_items.each do |order_item| %>
-          <%= render 'public/cart_row', listing: order_item.listing, order_item: order_item, show_total: true %>
-         <% end %>
+        <%= render 'public/cart_row' %>
       </tbody>
     </table>
     <% end %>
