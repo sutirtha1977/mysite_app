@@ -1,8 +1,9 @@
 #category {
   .left-sidebar {
     h2 {
-      color: $blue;
-      font-family: 'Roboto', sans-serif;
+      color: $dark;
+      background-color: lighten(#03a9f4, 40);
+      // font-family: 'Roboto', sans-serif;
       font-size: 1.2em;
       font-weight: $heavy;
       margin: 0 auto 30px;
@@ -10,7 +11,10 @@
       text-transform: uppercase;
       position: relative;
       z-index:3;
+      // border: 1px solid $dark;
+      @include shadow-4dp();
     }
+
     .category-products {
       // border: 1px solid #F7F7F0;
       margin-bottom: 35px;
@@ -32,8 +36,9 @@
           padding: 5px 20px;
           .panel-title {
             a {
-              color: #696763;
-              font-family: 'Roboto', sans-serif;
+              // color: #696763;
+              color: $red;
+              // font-family: 'Roboto', sans-serif;
               font-size: .8em;
               text-decoration: none;
               text-transform: uppercase;
@@ -64,10 +69,17 @@
     .panel-body ul{
       padding-left: 20px;
       li a {
-        color: #696763;
-        font-family: 'Roboto', sans-serif;
+        // color: #696763;
+        color: $dark;
+        // font-family: 'Roboto', sans-serif;
         font-size: .8em;
         text-transform: uppercase;
+        &:hover {
+          color: $light;
+          background-color: #03a9f4;
+          font-size: 1em;
+          padding: 2px;
+        }
       }
     }
   }
@@ -78,13 +90,16 @@
       overflow:hidden;
       h2.title {
         color: $blue;
-        font-family: 'Roboto', sans-serif;
+        // font-family: 'Roboto', sans-serif;
+        background-color: lighten($red, 40);
         font-size: 1.2em;
         font-weight: $heavy;
         margin: 0 15px;
         text-transform: uppercase;
         margin-bottom: 30px;
         position: relative;
+        // border: 1px solid $dark;
+        @include shadow-4dp();
       }
       .product-image-wrapper{
         @include big-shadow();

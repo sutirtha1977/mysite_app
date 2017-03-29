@@ -56,7 +56,7 @@
 	  	.navbar-nav {
 		    > li {
 		    	// box-shadow: 1px 1px 1px 1px $dark;
-		    	@include shadow-4dp();
+		    	// @include shadow-4dp();
 				> a {
 					// color: $colDefault;
 					color: $dark;
@@ -68,7 +68,7 @@
 					&:hover,  &:focus {
 				  		// color: $colHighlight; 
 				  		// color: $colDefault;
-				  		color: $dark;
+				  		color: $light;
 				  	}
 				}
 		      	@if $dropDown {
@@ -79,7 +79,8 @@
 				            > a {
 				              	color: $dark;
 				              	&:hover,  &:focus {
-					                color: $colHighlight;
+					                // color: $colHighlight;
+					                color: $light;
 					                background-color: $bgHighlight; 
 					                font-weight: $normal;
 				            	}
@@ -94,20 +95,23 @@
 		    @if $dropDown {
 		      	.open .dropdown-menu > .active {
 		        	> a, > a:hover, > a:focus {
-		          		color: $colHighlight;
+		          		// color: $colHighlight;
+						color: $light;
 		          		background-color: $bgHighlight; 
 		      		}
 		  		}
 		  	}
 		    > .active {
 		      	> a, > a:hover, > a:focus {
-		        	color: $colHighlight;
+		        	// color: $colHighlight;
+		        	color: $light;
 		        	background-color: $bgHighlight; 
 		    	}
 			}
 		    > .open {
 		      	> a, > a:hover, > a:focus {
-		        	color: $colHighlight;
+		        	// color: $colHighlight;
+		        	color: $light;
 		        	background-color: $bgHighlight; 
 		    	}
 			}

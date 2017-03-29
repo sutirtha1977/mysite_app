@@ -4,9 +4,9 @@
     <%= order_item.listing.name %>
     <p><%= order_item.listing.short_desc %></p>
   </td>
-  <td><%= number_to_currency(order_item.unit_price, :unit => "Rs. ") %></td>
-  <td><%= order_item.quantity.to_i %></td>
-  <td><%= number_to_currency(order_item.total_price, :unit => "Rs. ") %></td>
+  <td class="text-center"><%= number_to_currency(order_item.unit_price, :unit => "Rs. ") %></td>
+  <td class="text-center"><%= order_item.quantity.to_i %></td>
+  <td class="text-center"><%= number_to_currency(order_item.total_price, :unit => "Rs. ") %></td>
   <td class="text-center">
     <%= link_to(order_item, method: :delete, remote: true, class: "btn btn-danger btn-circle btn-sm") do %>
       <i class="fa fa-trash-o" aria-hidden="true"></i>

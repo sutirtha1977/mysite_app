@@ -47,6 +47,7 @@
 		thead {
 			// @include big-shadow();
 			@include shadow-6dp();
+			background-color: lighten(#03a9f4, 20);
 			tr th {
 				// @include shadow-2dp();
 				// text-align: center;
