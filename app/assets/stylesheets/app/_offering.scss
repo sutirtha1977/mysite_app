@@ -7,7 +7,7 @@
 	    margin-bottom: 20px;
 	    border-radius: 3px;
   		color: rgba(0,0,0, 0.87);
-  		background: #fff;
+  		background: $light;
   
 	    .header{
 	        @include shadow-big();
@@ -32,7 +32,7 @@
 		  background: linear-gradient(60deg, #ef5350, #d32f2f);
 		}
 		[class*="header-"] {
-		  color: #FFFFFF;
+		  color: $light;
 		}
 		.content{
 	        padding: 20px;
@@ -56,7 +56,7 @@
 
 		    > li {
 		        > a {
-		            color: #FFFFFF;
+		            color: $light;
 		            border: 0;
 		            margin: 0;
 

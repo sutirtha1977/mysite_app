@@ -23,7 +23,7 @@
 		}
 	}
 	.socials i {
-		background-color:#fff;
+		background-color:$light;
 		border-radius: 50%;
 		color: #43484E;
 		display: inline-block;
@@ -47,7 +47,7 @@
 	a {
 		i:hover {
 			opacity:1;
-			color:#fff;
+			color:$light;
 			border:0
 		}
 		.fa-facebook:hover {

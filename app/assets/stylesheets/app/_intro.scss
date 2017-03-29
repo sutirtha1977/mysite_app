@@ -9,18 +9,18 @@ div .fullheight {
   justify-content: center;
   .hgroup {
     h1 {
-      color: #FFFFFF;
+      color: $light;
       font-size: 5em;
       font-weight: 800;
       line-height: .8em;
-      text-shadow: #000000 0 0 20px;
+      text-shadow: $dark 0 0 20px;
       text-align: center;
     }
     h2 {
-      color: #FFFFFF;
+      color: $light;
       margin: 0 auto;
       text-align: center;
-      border: 1px solid #FFFFFF;
+      border: 1px solid $light;
       margin-top: 15px;
       padding: 10px;
       background: rgba(0, 0, 0, 0.5);

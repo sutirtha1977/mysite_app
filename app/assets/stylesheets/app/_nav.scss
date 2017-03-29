@@ -1,8 +1,8 @@
 #header_top {
-	$bgDefault      : #063642;
-	$bgHighlight    : #df4848;
+	// $bgDefault      : #063642;
+	// $bgHighlight    : #df4848;
 	$colDefault     : #ecf0f1;
-	$colHighlight   : #efc94c;
+	// $colHighlight   : #efc94c;
 	$dropDown		: true;
 
 	.cart-text {
@@ -20,16 +20,16 @@
 		box-shadow: 5px 5px 5px $dark;
 
 		&:hover, &:focus {
-		  color: #fff;
-		  background-color: #555555;
+		  color: $light;
+		  background-color: $gray;
 		}
 	}
 
 	.navbar-default {
 		// @include background-image(linear-gradient(top, lighten($navBackground, 30), $navBackground));
-	  	background-color: #03a9f4;
+	  	background-color: $baseblue;
 
-	  	border-color: $bgHighlight;
+	  	border-color: $red;
 		.navbar-brand {
 			// color: $colDefault;
 			color: $dark;
@@ -48,7 +48,7 @@
 				    font-size: 1.5em;
 				}
 				&:hover, &:focus {
-				  // color: $colHighlight; 
+				  // color: $yellow; 
 				  color: $light;
 				}
 		}
@@ -60,33 +60,33 @@
 				> a {
 					// color: $colDefault;
 					color: $dark;
-					// background-color: $bgHighlight;
-					background-color: lighten(#03a9f4, 20);
+					// background-color: $red;
+					background-color: lighten($baseblue, 20);
 					// margin-top: 5px;
 					margin-left: 10px;
 					// box-shadow: 1px 1px 1px 1px $dark;
 					&:hover,  &:focus {
-				  		// color: $colHighlight; 
+				  		// color: $yellow; 
 				  		// color: $colDefault;
 				  		color: $light;
 				  	}
 				}
 		      	@if $dropDown {
 		        	> .dropdown-menu {
-		          		background-color: lighten(#03a9f4, 20);
+		          		background-color: lighten($baseblue, 20);
 
 		          		> li {
 				            > a {
 				              	color: $dark;
 				              	&:hover,  &:focus {
-					                // color: $colHighlight;
+					                // color: $yellow;
 					                color: $light;
-					                background-color: $bgHighlight; 
+					                background-color: $red; 
 					                font-weight: $normal;
 				            	}
 				        	}
 				            > .divider {
-				              background-color: $bgHighlight;
+				              background-color: $red;
 				          	}
 		          		}
 		         	}
@@ -95,33 +95,33 @@
 		    @if $dropDown {
 		      	.open .dropdown-menu > .active {
 		        	> a, > a:hover, > a:focus {
-		          		// color: $colHighlight;
+		          		// color: $yellow;
 						color: $light;
-		          		background-color: $bgHighlight; 
+		          		background-color: $red; 
 		      		}
 		  		}
 		  	}
 		    > .active {
 		      	> a, > a:hover, > a:focus {
-		        	// color: $colHighlight;
+		        	// color: $yellow;
 		        	color: $light;
-		        	background-color: $bgHighlight; 
+		        	background-color: $red; 
 		    	}
 			}
 		    > .open {
 		      	> a, > a:hover, > a:focus {
-		        	// color: $colHighlight;
+		        	// color: $yellow;
 		        	color: $light;
-		        	background-color: $bgHighlight; 
+		        	background-color: $red; 
 		    	}
 			}
 		}
 
 		.navbar-toggle {
-			border-color: $bgHighlight;
-			background-color: $bgHighlight; 
+			border-color: $red;
+			background-color: $red; 
 			&:hover, &:focus {
-		  		background-color: $bgHighlight; 
+		  		background-color: $red; 
 		  	}
 			.icon-bar {
 		  		background-color: $colDefault; 
@@ -134,7 +134,7 @@
 	  	.navbar-link {
 	    	color: $colDefault;
 	    	&:hover {
-	      		color: $colHighlight; 
+	      		color: $yellow; 
 	      	}
 	    }
 	}
@@ -143,11 +143,11 @@
 	    > li > a {
 	      color: $colDefault;
 	      &:hover, &:focus {
-	        color: $colHighlight; }}
+	        color: $yellow; }}
 	    > .active {
 	      > a, > a:hover, > a:focus {
-	        color: $colHighlight;
-	        background-color: $bgHighlight; }}}
+	        color: $yellow;
+	        background-color: $red; }}}
 	}
   
 }

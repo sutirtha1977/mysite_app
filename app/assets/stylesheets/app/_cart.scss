@@ -12,13 +12,13 @@
 		input {
 			@include shadow-2dp();
 			margin-left: 10px;
-			color: #555555;
-			background-color: #ffffff;
+			color: $gray;
+			background-color: $light;
 			background-image: none;
-			border: 1px solid #cccccc;
+			border: 1px solid $lightgray;
 			border-radius: 5px;
 			&:focus {
-				border-color: #009688;
+				border-color: $green;
 				outline: 0;
 			}
 		}
@@ -47,7 +47,7 @@
 		thead {
 			// @include big-shadow();
 			@include shadow-6dp();
-			background-color: lighten(#03a9f4, 20);
+			background-color: lighten($baseblue, 20);
 			tr th {
 				// @include shadow-2dp();
 				// text-align: center;

@@ -2,7 +2,7 @@
   .left-sidebar {
     h2 {
       color: $dark;
-      background-color: lighten(#03a9f4, 40);
+      background-color: lighten($baseblue, 40);
       // font-family: 'Roboto', sans-serif;
       font-size: 1.2em;
       font-weight: $heavy;
@@ -21,7 +21,7 @@
       padding-bottom: 20px;
       padding-top: 15px;
       .panel {
-        background-color: #FFFFFF;
+        background-color: $light;
         // border: 0px;
         border: 1px solid #F7F7F0;
         border-radius: 0px;
@@ -30,9 +30,9 @@
       }
       .panel-default {
         .panel-heading {
-          background-color: #FFFFFF;
+          background-color: $light;
           border: 0 none;
-          color: #FFFFFF;
+          color: $light;
           padding: 5px 20px;
           .panel-title {
             a {
@@ -76,7 +76,7 @@
         text-transform: uppercase;
         &:hover {
           color: $light;
-          background-color: #03a9f4;
+          background-color: $baseblue;
           font-size: 1em;
           padding: 2px;
         }
@@ -145,7 +145,7 @@
             }
           }
           .product-overlay {
-            background:#03a9f4;
+            background:$baseblue;
             top: 0;
             display: none;
             height: 0;
