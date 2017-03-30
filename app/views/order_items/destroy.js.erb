@@ -1,4 +1,6 @@
 $(".cart-text").html("<%= j (render 'layouts/app/cart_text') %>")
 $(".cart-index").html("<%= j (render 'public/cart_row') %>")
+$(".cart-footer").empty();
+$(".cart-footer").append("<td colspan='5'><span class='total'>Total: </span><%= number_to_currency(@order.subtotal, :unit => 'Rs. ') %></td>")
 
 

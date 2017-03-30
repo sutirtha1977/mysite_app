@@ -23,7 +23,12 @@
       </thead>
       <tbody class="cart-index">
         <%= render 'public/cart_row' %>
-      </tbody>
+      </tbody> 
+      <tfoot>
+        <tr class="cart-footer">
+          <td colspan="5"><span class="total">Total: </span><%= number_to_currency(@order.subtotal, :unit => "Rs. ") %></td>
+        </tr>
+      </tfoot>
     </table>
     <% end %>
   </div>

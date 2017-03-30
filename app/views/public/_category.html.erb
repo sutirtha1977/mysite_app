@@ -6,163 +6,126 @@
     </div>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3">
-				<div class="left-sidebar">
-					<h2>Category</h2>
-					<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-						<% if @services.count > 0 %>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordian" href="#services">
-										<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-										Services
-									</a>
-								</h4>
-							</div>
-							<div id="services" class="panel-collapse collapse">
-								<div class="panel-body">
-									<ul class="cat-s">
-						    	    	<li><a href="javascript:void(0)" data-filter="*" class="active">All</a></li>
-						    	    	<% @services.each do |service| %>
-						    	        <li><%= link_to service.name, "javascript:void(0)", "data-filter": "." + service.name.downcase %></li>
-						    	        <% end %>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<% end %>
-						<% if @products.count > 0 %>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordian" href="#products">
-										<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-										Products
-									</a>
-								</h4>
-							</div>
-							<div id="products" class="panel-collapse collapse">
-								<div class="panel-body">
-									<ul class="cat-p">
-						    	    	<li><a href="javascript:void(0)" data-filter="*" class="active">All</a></li>
-						    	    	<% @products.each do |product| %>
-						    	        <li><%= link_to product.name, "javascript:void(0)", "data-filter": "." + product.name.downcase %></li>
-						    	        <% end %>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<% end %>
-					</div><!--/category-products-->
+			<div class="features_items"><!--features_items-->
+				<h2 class="title text-center">Services</h2>
+				<div class="text-center">
+					<ul class="list-inline cat-s"> 
+						<li><a href="javascript:void(0)" data-filter="*" class="active btn">All</a></li>
+						<% @services.each do |service| %>
+					    <li><%= link_to service.name, "javascript:void(0)", "data-filter": "." + service.name.downcase, class: "btn" %></li>
+					    <% end %>
+					</ul>
 				</div>
-			</div>
-			<div class="col-sm-9 padding-right">
-				<div class="features_items"><!--features_items-->
-					<h2 class="title text-center">Services</h2>
-					<div id="service-list">
-						<% @listings_service.each do |service| %>
-						<div class="col-sm-4 <%= service.cat_name.downcase %>">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<%= images(service.image_loc, {class: "img-responsive"}, "listing") %>
+				<div id="service-list">
+					<% @listings_service.each do |service| %>
+					<div class="col-sm-4 col-md-3 <%= service.cat_name.downcase %>">
+						<div class="product-image-wrapper">
+							<div class="single-products">
+								<div class="productinfo text-center">
+									<%= images(service.image_loc, {class: "img-responsive"}, "listing") %>
+									<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
+									<p><%= service.name %></p>
+									<% if user_signed_in? %>
+									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									<% else %>
+									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
+									<% end %>
+								</div>
+								<div class="product-overlay">
+									<div class="overlay-content">
 										<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
 										<p><%= service.name %></p>
 										<% if user_signed_in? %>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+					                        <%= form_for @order_item, remote: true do |f| %>
+					                            <%= f.hidden_field :listing_id, value: service.id %>
+					                            <%= f.hidden_field :user_id, value: current_user.id %>
+					                            <%= f.hidden_field :quantity, value: 1 %>
+												<%= button_tag( :class => "btn btn-default add-to-cart") do %>
+												  <i class="fa fa-shopping-cart"></i>Add to cart
+												<% end %>
+					                        <% end %>
 										<% else %>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
+											<%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
+												<i class="fa fa-sign-in"></i>Please login
+											<% end %>
 										<% end %>
 									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2><%= number_to_currency(service.curr_price, :unit => "Rs. ") %></h2>
-											<p><%= service.name %></p>
-											<% if user_signed_in? %>
-						                        <%= form_for @order_item, remote: true do |f| %>
-						                            <%= f.hidden_field :listing_id, value: service.id %>
-						                            <%= f.hidden_field :user_id, value: current_user.id %>
-						                            <%= f.hidden_field :quantity, value: 1 %>
-													<%= button_tag( :class => "btn btn-default add-to-cart") do %>
-													  <i class="fa fa-shopping-cart"></i>Add to cart
-													<% end %>
-						                        <% end %>
-											<% else %>
-												<%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
-													<i class="fa fa-sign-in"></i>Please login
-												<% end %>
-											<% end %>
-										</div>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
-										<li>
-											<%= link_to(listing_detail_public_index_path(:id => service.id), remote: true) do %>
-												<i class="fa fa-plus-square"></i>View Details</a>
-											<% end %>
-										</li>
-									</ul>
 								</div>
 							</div>
+							<div class="choose">
+								<ul class="nav nav-pills nav-justified">
+									<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
+									<li>
+										<%= link_to(listing_detail_public_index_path(:id => service.id), remote: true) do %>
+											<i class="fa fa-plus-square"></i>View Details</a>
+										<% end %>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<% end %>
 					</div>
-					<h2 class="title text-center">Products</h2>
-					<div id="product-list">
-						<% @listings_product.each do |product| %>
-						<div class="col-sm-4 <%= product.cat_name.downcase %>">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<%= images(product.image_loc, {class: "img-responsive"}, "listing") %>
+					<% end %>
+				</div>
+				<h2 class="title text-center">Products</h2>
+				<div class="text-center">
+					<ul class="list-inline cat-p">
+						<li><a href="javascript:void(0)" data-filter="*" class="active btn">All</a></li>
+						<% @products.each do |product| %>
+					    <li><%= link_to product.name, "javascript:void(0)", "data-filter": "." + product.name.downcase, class: "btn" %></li>
+					    <% end %>
+					</ul>
+				</div>
+				<div id="product-list">
+					<% @listings_product.each do |product| %>
+					<div class="col-sm-4 col-md-3 <%= product.cat_name.downcase %>">
+						<div class="product-image-wrapper">
+							<div class="single-products">
+								<div class="productinfo text-center">
+									<%= images(product.image_loc, {class: "img-responsive"}, "listing") %>
+									<h2><%= number_to_currency(product.curr_price, :unit => "Rs. ") %></h2>
+									<p><%= product.name %></p>
+									<% if user_signed_in? %>
+									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									<% else %>
+									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
+									<% end %>
+								</div>
+								<div class="product-overlay">
+									<div class="overlay-content">
 										<h2><%= number_to_currency(product.curr_price, :unit => "Rs. ") %></h2>
 										<p><%= product.name %></p>
 										<% if user_signed_in? %>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+					                        <%= form_for @order_item, remote: true do |f| %>
+					                            <%= f.hidden_field :listing_id, value: product.id %>
+					                            <%= f.hidden_field :user_id, value: current_user.id %>
+					                            <%= f.hidden_field :quantity, value: 1 %>
+												<%= button_tag( :class => "btn btn-default add-to-cart") do %>
+												  <i class="fa fa-shopping-cart"></i>Add to cart
+												<% end %>
+					                        <% end %>
 										<% else %>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
+											<%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
+												<i class="fa fa-sign-in"></i>Please login
+											<% end %>
 										<% end %>
 									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2><%= number_to_currency(product.curr_price, :unit => "Rs. ") %></h2>
-											<p><%= product.name %></p>
-											<% if user_signed_in? %>
-						                        <%= form_for @order_item, remote: true do |f| %>
-						                            <%= f.hidden_field :listing_id, value: product.id %>
-						                            <%= f.hidden_field :user_id, value: current_user.id %>
-						                            <%= f.hidden_field :quantity, value: 1 %>
-													<%= button_tag( :class => "btn btn-default add-to-cart") do %>
-													  <i class="fa fa-shopping-cart"></i>Add to cart
-													<% end %>
-						                        <% end %>
-											<% else %>
-												<%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
-													<i class="fa fa-sign-in"></i>Please login
-												<% end %>
-											<% end %>
-										</div>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
-										<li>
-											<%= link_to(listing_detail_public_index_path(:id => product.id), remote: true) do %>
-												<i class="fa fa-plus-square"></i>View Details</a>
-											<% end %>
-										</li>
-									</ul>
 								</div>
 							</div>
+							<div class="choose">
+								<ul class="nav nav-pills nav-justified">
+									<!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
+									<li>
+										<%= link_to(listing_detail_public_index_path(:id => product.id), remote: true) do %>
+											<i class="fa fa-plus-square"></i>View Details</a>
+										<% end %>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<% end %>
 					</div>
-				</div><!--features_items-->				
-			</div>
+					<% end %>
+				</div>
+			</div><!--features_items-->				
 		</div>
 	</div>
 </div>

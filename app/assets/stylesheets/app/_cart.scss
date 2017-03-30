@@ -30,7 +30,8 @@
 		}
 	}
 	.dataTables_info {
-		color: $red;
+		// color: $red;
+		display: none;
 	}
 	.dataTables_paginate {
 		// color: $red;
@@ -41,24 +42,41 @@
 			font-size: .9em;
 		}
 	}
-
+	table.dataTable thead .sorting::after, 
+	table.dataTable thead .sorting_asc::after, 
+	table.dataTable thead .sorting_desc::after {
+		color: $light;
+		opacity: 1; 
+	}
 	.table-advance {
 		margin: 10px 0 !important;
 		thead {
 			// @include big-shadow();
 			@include shadow-6dp();
-			background-color: lighten($baseblue, 20);
+			// background-color: $baseblue;
+			background-color: $dark;
 			tr th {
 				// @include shadow-2dp();
 				// text-align: center;
 				font-size: 1.1em;
-				font-weight: $bold;
-				color: $dark;
+				font-weight: $normal;
+				color: $light;
 				text-transform: uppercase;
 			}		
 		}
 		tbody tr td a {
 			@include shadow-4dp();
+		}
+		tfoot tr td {
+			text-align: right;
+			font-size: 1.2em;
+			color: $red;
+			.total {
+				font-weight: $heavy;
+				text-transform: uppercase;
+				margin-right: 10px;
+				color: $blue;
+			}
 		}
 	}
 }
