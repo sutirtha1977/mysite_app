@@ -11,32 +11,25 @@
   </head>
 
   <body>
-  	<% unless flash.empty? %>
-  	     <script type="text/javascript">
-            <% flash.each do |f| %>
-            <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
-             toastr['<%= type %>']('<%= f[1] %>');
-            <% end %>
-  	     </script>
-  	<% end %>
+    <div class="flash-msg">
+      <%= render 'layouts/app/flash_message' %> <!-- flash_message -->
+    </div> 
     <%= render 'layouts/app/nav' %> <!-- navigation -->
 
-
-      <% if devise_controller? %>
-        <div class="main">
-          <div class="fullheight" id="devise">
-            <div class="row">
-                <%= yield %> <!-- main content -->
-            </div>
+    <% if devise_controller? %>
+      <div class="main">
+        <div class="fullheight" id="devise">
+          <div class="row">
+              <%= yield %> <!-- main content -->
           </div>
         </div>
-      <% else %>
-        <div class="main main-raised">
-          <%= yield %> <!-- main content -->
-        </div>
-      <% end %>
+      </div>
+    <% else %>
+      <div class="main main-raised">
+        <%= yield %> <!-- main content -->
+      </div>
+    <% end %>
       
-
     <%= render 'layouts/app/footer' %> <!-- footer -->
   </body>
 </html>

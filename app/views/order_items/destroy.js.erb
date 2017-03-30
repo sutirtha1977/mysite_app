@@ -1,4 +1,7 @@
 $(".cart-text").html("<%= j (render 'layouts/app/cart_text') %>")
 $(".cart-index").html("<%= j (render 'public/cart_row') %>")
 $(".cart-footer").html("<%= j (render 'public/cart_footer') %>")
+$(".flash-msg").html("<%= j (render 'layouts/app/flash_message') %>")
+<%= flash.clear %>
+
 

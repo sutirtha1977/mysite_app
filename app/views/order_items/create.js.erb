@@ -1,1 +1,3 @@
 $(".cart-text").html("<%= j (render 'layouts/app/cart_text') %>")
+$(".flash-msg").html("<%= j (render 'layouts/app/flash_message') %>")
+<%= flash.clear %>

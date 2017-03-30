@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-gem 'toastr-rails'
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
