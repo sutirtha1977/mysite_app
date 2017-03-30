@@ -26,7 +26,7 @@
       </tbody> 
       <tfoot>
         <tr class="cart-footer">
-          <td colspan="5"><span class="total">Total: </span><%= number_to_currency(@order.subtotal, :unit => "Rs. ") %></td>
+          <%= render 'public/cart_footer' %>
         </tr>
       </tfoot>
     </table>
