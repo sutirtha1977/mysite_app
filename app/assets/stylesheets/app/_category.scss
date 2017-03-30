@@ -30,7 +30,7 @@
         color: $blue;
         @include shadow-4dp();
         &:hover {
-          font-size: 1.1em;
+          // font-size: 1.1em;
         }
       }
       .btn.active {
