@@ -18,8 +18,9 @@
 			border: 1px solid $lightgray;
 			border-radius: 5px;
 			&:focus {
-				border-color: $green;
+				border: 1px solid $green;
 				outline: 0;
+				@include shadow-4dp();
 			}
 		}
 	}
@@ -101,6 +102,24 @@
 				margin-right: 10px;
 				color: $blue;
 			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.dataTables_length {
+			margin-bottom: 10px;
+		}
+		.table-advance  .btn, .table-advance .input-group{
+			// float:right;
+		}
+		
+		thead { display: none; }
+	}
+	@media screen and (max-width: 767px) {
+		.dataTables_length {
+			margin-bottom: 10px;
+		}
+		.dataTables_length, .dataTables_filter {
+			text-align: right;
 		}
 	}
 }
