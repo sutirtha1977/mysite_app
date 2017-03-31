@@ -108,11 +108,11 @@
 		.dataTables_length {
 			margin-bottom: 10px;
 		}
-		.table-advance  .btn, .table-advance .input-group{
+		.table-advance{
 			// float:right;
+			// margin-right: 10px;
+			thead { display: none; }
 		}
-		
-		thead { display: none; }
 	}
 	@media screen and (max-width: 767px) {
 		.dataTables_length {
