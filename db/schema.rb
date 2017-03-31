@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321180002) do
+ActiveRecord::Schema.define(version: 20170331210153) do
 
   create_table "listings", force: :cascade do |t|
     t.integer  "product_id"
@@ -68,6 +68,15 @@ ActiveRecord::Schema.define(version: 20170321180002) do
     t.boolean  "visible",     default: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "rating"
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "listing_id"
   end
 
   create_table "teams", force: :cascade do |t|

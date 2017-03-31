@@ -1,1 +1,16 @@
 $(".main").html("<%= j (render 'public/listing_detail') %>")
+/************************************ 
+review rating start 
+************************************/
+$('.product-rating').raty({
+	<% if !user_signed_in? %>
+    readOnly: true,
+    <% end %>
+    score: function () {
+        return $(this).attr('data-score');
+    },
+    path: '/assets/'
+});
+/************************************ 
+review rating end 
+************************************/

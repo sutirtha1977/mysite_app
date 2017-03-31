@@ -21,5 +21,6 @@
 //= require isotope.pkgd.min
 //= require imagesloaded.pkgd.min
 //= require jquery.scrollUp.min
+//= require jquery.raty
 //= require app_func
 

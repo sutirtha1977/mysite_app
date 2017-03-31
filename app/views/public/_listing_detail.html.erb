@@ -14,7 +14,7 @@
                     <div class="col-sm-8">
                         <div class="h3 text-danger"><%= @list_details.name %></div>
                         <div class="h4 text-info"><%= @list_details.short_desc %></div>
-                        <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+                        <div class="product-rating" data-score="1"></div>
                         <hr>
                         <div class="h4"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ") %></div>
                         <!-- <div class="product-stock">In Stock</div> -->
