@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   	devise_for :users
 
 	get 'public/about'
-
 	# resource :cart, only: [:show]
 
-	resources :order_items, only: [:create, :destroy]
+	resources :order_items, only: [:create, :destroy] do
+		put 'decrease', on: :member
+		put 'increase', on: :member
+	end
 
 	resources :public do
 		collection do

@@ -5,7 +5,21 @@
     <p><%= order_item.listing.short_desc %></p>
   </td>
   <td class="text-center"><%= number_to_currency(order_item.unit_price, :unit => "Rs. ") %></td>
-  <td class="text-center"><%= order_item.quantity.to_i %></td>
+  <td class="text-center">
+    <div class="input-group">
+      <%= link_to decrease_order_item_path(order_item, :listing_id => order_item.listing.id), 
+          method: :put, remote: true, 
+          class: 'input-group-addon ' + (order_item.quantity.to_i===1 ? 'disable-link' : '') do %>
+        <i class="fa fa-minus-circle fa-lg"></i>
+      <% end %>
+      <input type="text" class="text-center form-control" value="<%= order_item.quantity %>" disabled>
+      <%= link_to increase_order_item_path(order_item, :listing_id => order_item.listing.id), 
+          method: :put, remote: true,
+          class: 'input-group-addon' do %>
+        <i class="fa fa-plus-circle fa-lg"></i>
+      <% end %>
+    </div>
+  </td>
   <td class="text-center"><%= number_to_currency(order_item.total_price, :unit => "Rs. ") %></td>
   <td class="text-center">
     <%= link_to(order_item, method: :delete, remote: true, class: "btn btn-danger btn-circle btn-sm") do %>
