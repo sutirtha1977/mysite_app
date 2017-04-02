@@ -23,9 +23,15 @@ Rails.application.routes.draw do
 		end
 	end
 
-	resources :listings, :users do
-		resources :reviews, only: [:create, :update]
+	resources :listings do
+		resources :reviews, only: [:create, :update, :destroy]
 	end
-
+	# resources :listings do
+	# 	resources :reviews, only: [:create, :update, :destroy] do
+	# 		member do
+	# 			get :delete
+	# 		end
+	# 	end
+	# end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

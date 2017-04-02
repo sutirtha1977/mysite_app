@@ -1,11 +1,59 @@
 #list-details {
 	.product-det {
-		margin-bottom: 20px;
+		margin: 20px 0;
 		.image-left img {
 			@include shadow-z-2();
 		}
+		.list-name {
+			font-size: 1.3em;
+			font-weight: $heavy;
+			color: $blue;
+			margin: 10px 0;
+		}
+		.list-sdesc {
+			font-size: 1em;
+			font-weight: $bold;
+			color: $blue;
+			margin: 10px 0;
+		}
+		.review {
+			margin: 10px 0;
+			a {
+				font-size: .9em;
+				margin-left: 5px;
+			}
+			#review-form {
+				padding: 10px;
+				// border: 1px solid $gray;
+				@include shadow-2dp();
+				border-radius: 20px 0;
+				margin: 10px 0;
+				label {
+					font-size: .9em;
+					font-weight: $normal;
+				}
+				.btn {
+					text-transform: uppercase;
+					color: $blue;
+					background-color: $light;
+					@include shadow-2dp();
+					&:hover {
+						background-color: $baseblue;
+						color:$light;					
+					}
+				}
+			}
+		}
+		.curr-price {
+			margin: 10px 0;
+			font-size: 1.1em;
+			font-weight: $heavy;
+			color: $baseblue;
+		}
+
 		.btn {
 			text-transform: uppercase;
+			margin: 10px 0;
 			// border: 1px solid #fc7700;
 			color: $red;
 			background-color: $light;
@@ -16,11 +64,30 @@
 				color:$light;					
 			}
 		}
+
+		#review-form {
+			display: none;
+		}
 	}	
 
-	#service-one {
-		// border: 1px solid;
-		font-weight: $normal;
+	.product-info {
+		@include big-shadow();
+		border-radius: 20px 0;
+		margin: 20px 0;
 		padding: 20px;
+		ul {
+			// font-size: .5em;
+			// font-weight: $bold;
+			// &:hover {
+			// 	font-size: 1.1em;
+			// }
+		}
+		#service-one, #service-two{
+			// border: 1px solid;
+			font-weight: $normal;
+			padding: 20px;
+		}
 	}
+
+
 }

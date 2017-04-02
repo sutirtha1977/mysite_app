@@ -41,7 +41,8 @@ gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'acts_as_list'
 gem 'rails_admin', '~> 1.1.1'
 gem 'cancancan'
-gem "animate-rails"
+gem 'animate-rails'
+gem 'simple_form'
 
 
 

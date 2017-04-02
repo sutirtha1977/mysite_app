@@ -1,0 +1,9 @@
+<div id="review-form">
+<%= simple_form_for([@list_details, @list_details.reviews.build], remote: true) do |f| %>
+	<div id="rating-form">
+	  <label>Rating</label> 
+	</div>
+	<%= f.input :comment %>
+	<%= f.button :submit, "Thanks for your feedback!!" %>  
+<% end %>
+</div>

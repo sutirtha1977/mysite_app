@@ -1,16 +1,29 @@
 $(".main").html("<%= j (render 'public/listing_detail') %>")
 /************************************ 
-review rating start 
+product rating start 
 ************************************/
 $('.product-rating').raty({
-	<% if !user_signed_in? %>
     readOnly: true,
-    <% end %>
     score: function () {
         return $(this).attr('data-score');
     },
     path: '/assets/'
 });
 /************************************ 
-review rating end 
+product rating end 
 ************************************/
+/************************************ 
+form rating start 
+************************************/
+
+$('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+});
+/************************************ 
+form rating end 
+************************************/
+$('.review-open').click(function(e) {
+	e.preventDefault();
+	$('#review-form').toggle();
+});
