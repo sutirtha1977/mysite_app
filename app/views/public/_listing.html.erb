@@ -1,4 +1,5 @@
-<div class="page listing" id="category">
+<div class="main-raised">
+<section class="listing" id="category">
     <div class="container">
         <div class="section-header">
             <h2 class="title-one"><span class="highlight"><strong><%= @listing.first.product.name %></strong></span></h2>
@@ -9,7 +10,7 @@
             <div class="col-sm-12 padding-right">
                 <div class="features_items"><!--features_items-->
                     <% @listing.each do |list| %>
-                    <div class="col-sm-3">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
@@ -60,5 +61,7 @@
             </div>
         </div>
     </div>
+</section>
 </div>
+
 

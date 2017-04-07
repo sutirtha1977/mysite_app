@@ -1,30 +1,38 @@
+<li class="dropdown">
+	<a href="#service" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Who we are <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><%= link_to 'About Us', public_about_path, remote: true %></li>
+		<li><%= link_to 'Offerings', offering_public_index_path, remote: true %></li>
+		<li><%= link_to 'Our Team', team_public_index_path, remote: true  %></li>
+		<li><%= link_to 'Gallery', gallery_public_index_path, remote: true %></li>
+	</ul>
+</li>
 
 <% if !devise_controller? %>
 	<% if @services.count > 0 %>
-	<li class="dropdown">
-	  <a href="#service" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></a>
-	  <ul class="dropdown-menu">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+      <ul class="dropdown-menu">
 	    <% @services.each do |service| %>
 	      <li><%= link_to service.name, listing_public_index_path(:product_id => service.id), remote: true %></li>
 	    <% end %>
-	  </ul>
-	</li>
+      </ul>
+    </li>
 	<% end %> <!-- services link -->
 
 	<% if @products.count > 0 %>
-	<li class="dropdown">
-	  <a href="#product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
-	  <ul class="dropdown-menu">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+      <ul class="dropdown-menu">
 	    <% @products.each do |product| %>
 	    <li><%= link_to product.name, listing_public_index_path(:product_id => product.id), remote: true %></li>
 	    <% end %>
-	  </ul>
-	</li>
+      </ul>
+    </li>
 	<% end %> <!-- products link -->
 <% end %>
-<li><%= link_to 'About', public_about_path, remote: true %></li>
-<li><%= link_to 'Offerings', offering_public_index_path, remote: true %></li>
-<li><%= link_to 'Team', team_public_index_path, remote: true  %></li>
-<li><%= link_to 'Gallery', gallery_public_index_path, remote: true %></li>
+
+
+
 
 

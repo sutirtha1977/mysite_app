@@ -1,7 +1,7 @@
 #about { 
   	text-align:center;
   	// @include background-image(linear-gradient(top, lighten($yellow,20), $orange));
-  	@include background-image(linear-gradient(top, $light, lighten($yellow, 20)));
+  	// @include background-image(linear-gradient(top, $light, lighten($yellow, 20)));
   	padding-bottom: 20px;
 
   	p {

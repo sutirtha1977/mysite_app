@@ -1,3 +1,6 @@
+transparent = true;
+hasTransparent = false;
+
 $(function() {  
     'use strict'
 
@@ -26,17 +29,40 @@ $(function() {
     //   "showMethod": "fadeIn",
     //   "hideMethod": "fadeOut"
     // }
-
+    /************************************ 
+    navigation start 
+    ************************************/
+    if($('nav[role="navigation"]').hasClass('navbar-transparent')){
+        hasTransparent = true;
+    }
+    $(document).scroll(function() {
+       if(hasTransparent){
+            if( $(this).scrollTop() > 260 ) {
+                if(transparent) {
+                    transparent = false;
+                    $('nav[role="navigation"]').removeClass('navbar-transparent');
+                }
+            } else {
+                if( !transparent ) {
+                    transparent = true;
+                    $('nav[role="navigation"]').addClass('navbar-transparent');
+                }
+            }
+        }
+    });
+    /************************************ 
+    navigation end 
+    ************************************/
     $(document).on('turbolinks:load', function() {
 
         /************************************ 
         make menus drop automatically start 
         ************************************/
-        $('ul.nav li.dropdown').hover(function() {
-            $('.dropdown-menu', this).fadeIn();
-        }, function() {
-            $('.dropdown-menu', this).fadeOut('fast');
-        });//hover
+        // $('ul.nav li.dropdown').hover(function() {
+        //     $('.dropdown-menu', this).fadeIn();
+        // }, function() {
+        //     $('.dropdown-menu', this).fadeOut('fast');
+        // });
         /************************************ 
         make menus drop automatically end 
         ************************************/

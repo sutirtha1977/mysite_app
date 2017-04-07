@@ -1,6 +1,6 @@
 <% @images = Dir.glob(File.join(Rails.root, 'app', 'assets', 'images', 'gallery', '*.jpg')) %>
-
-<div class="page" id="photo">
+<div class="main-raised">
+<section id="photo">
 	<div class="container">
 		<div class="section-header">
 		    <h2 class="title-one">Check out <span class="highlight"><strong>photos</strong></span></h2>
@@ -16,7 +16,9 @@
 		    <% end %>
 		</section><!-- .gallery -->
 	</div>
+</section>
 </div>
+
 
 
 

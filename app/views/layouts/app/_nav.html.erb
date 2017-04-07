@@ -1,39 +1,26 @@
-<header id="header_top">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="#" class="navbar-brand">My Site</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-left">
-          <%= render 'layouts/app/nav_links' %>
-        </ul>
-        <div class="nav navbar-nav navbar-right">
-          <% if can? :manage, :all %>
-            <%= link_to(rails_admin_path, class: "btn btn-success") do %> <!-- admin link -->
-            <i class="fa fa-cog fa-fw"></i> <span class="hidden-xs">Admin</span>
-            <% end %>
-          <% end %>
-          <%= render 'layouts/app/nav_auth' %>
-          <% if user_signed_in? %>
-          <span class="cart-text">
-            <%= render 'layouts/app/cart_text' %>
-          </span>
-          <% end %>
+ <div id="navbar-full">
+  <div id="navbar">
+    <nav class="navbar navbar-ct-gray navbar-fixed-top navbar-transparent" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand navbar-brand-logo">My Site</a>
         </div>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</header>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <%= render 'layouts/app/nav_links' %>
+            <%= render 'layouts/app/nav_auth' %>
+           </ul>          
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div><!--  end navbar -->
+</div> <!-- end menu-dropdown -->
 
 
 
