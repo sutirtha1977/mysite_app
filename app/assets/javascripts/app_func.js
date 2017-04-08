@@ -37,7 +37,7 @@ $(function() {
     }
     $(document).scroll(function() {
        if(hasTransparent){
-            if( $(this).scrollTop() > 260 ) {
+            if( $(this).scrollTop() > 615 ) {
                 if(transparent) {
                     transparent = false;
                     $('nav[role="navigation"]').removeClass('navbar-transparent');
@@ -53,6 +53,18 @@ $(function() {
     /************************************ 
     navigation end 
     ************************************/
+
+    /************************************ 
+    make menus toggle for remote calls start 
+    ************************************/
+    // $('ul.dropdown-menu a[data-remote=true]').click(function () {
+    //     $(this).closest('ul').prev('button').dropdown('toggle');
+    // });
+    /************************************ 
+    make menus toggle for remote calls end 
+    ************************************/
+
+
     $(document).on('turbolinks:load', function() {
 
         /************************************ 

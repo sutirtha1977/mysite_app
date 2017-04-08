@@ -1,12 +1,12 @@
 @media screen and (max-width: 1000px) {
-	h1 { font-size: 2.2em; }
+	h1 { font-size: 2.5em; }
 }
 
 @media screen and (max-width: 768px) {
-	h1 { font-size: 1.8em; }
-	h2 { font-size: 1.4em; }
-	h3 { font-size: 1.1em; }
-	h4 { font-size: 1.1em; }
+	h1 { font-size: 2.2em; }
+	h2 { font-size: 1.8em; }
+	h3 { font-size: 1.4em; }
+	h4 { font-size: 1.4em; }
 
     .navbar-transparent{
         // padding-top: 15px;
@@ -47,9 +47,9 @@
 }
 
 @media screen and (max-width: 625px) {
-	h1 { font-size: 1.3em; }
-	h2 { font-size: 1.2em; }
-	h3 { font-size: 1.1em; }
+	h1 { font-size: 1.8em; }
+	h2 { font-size: 1.4em; }
+	h3 { font-size: 1.2em; }
 	h4 { font-size: 1em; }
 
 	#nav-top {
@@ -137,5 +137,74 @@
         right: 15px;
         top: -10px;
     }
+
+    .title-one:before {
+        color: $orange;
+        content: "||";
+        left: -40px;
+        position: absolute;
+        top: 0;
+    }
+    .title-one:after{
+        color: $orange;
+        content: "||";
+        position: absolute;
+        right: -40px;
+        top: -2px;
+    }
     
 }
+/************************************ 
+gallery Isotope start 
+************************************/
+@media screen and (min-width: 40em) {
+    .photo {
+        width: 50%;
+    }
+    .double {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .photo {
+        width: 33%;
+    }
+    .double {
+        width: 66%;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .photo {
+        width: 25%;
+    }
+    .double {
+        width: 50%;
+    }
+}
+/************************************ 
+gallery Isotope end 
+************************************/
+/************************************ 
+bootstrap container adjustment start 
+************************************/
+@media (min-width: 600px) {
+    .container{max-width: 600px;width: 600px;}
+}
+@media (min-width: 768px) {
+    .container{max-width: 900px;}
+}
+@media (min-width: 992px) {
+    .container{max-width: 900px;}
+}
+@media (min-width: 1024px) {
+    .container{width: 970px;}
+}
+@media (min-width: 1200px){
+    .container{width: 1170px;max-width: 1170px;}
+}
+/************************************ 
+bootstrap container adjustment end 
+************************************/
+

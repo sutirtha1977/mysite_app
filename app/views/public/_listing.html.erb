@@ -1,5 +1,5 @@
 <div class="main-raised">
-<section class="listing" id="category">
+<section id="category">
     <div class="container">
         <div class="section-header">
             <h2 class="title-one"><span class="highlight"><strong><%= @listing.first.product.name %></strong></span></h2>
@@ -7,58 +7,13 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <% @listing.each do |list| %>
+            <div class="features_items">
+                <% @listing.each do |list| %>
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <%= images(list.image_loc, {class: "img-responsive"}, "listing") %>
-                                    <h2><%= number_to_currency(list.curr_price, :unit => "Rs. ") %></h2>
-                                    <p><%= list.name %></p>
-                                    <% if user_signed_in? %>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    <% else %>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-sign-in"></i>Please login</a>
-                                    <% end %>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2><%= number_to_currency(list.curr_price, :unit => "Rs. ") %></h2>
-                                        <p><%= list.name %></p>
-                                        <% if user_signed_in? %>
-                                              <%= form_for @order_item, remote: true do |f| %>
-                                                <%= f.hidden_field :listing_id, value: list.id %>
-                                                <%= f.hidden_field :user_id, value: current_user.id %>
-                                                <%= f.hidden_field :quantity, value: 1 %>
-                                                <%= button_tag( :class => "btn btn-default add-to-cart") do %>
-                                                  <i class="fa fa-shopping-cart"></i>Add to cart
-                                                <% end %>
-                                            <% end %>
-                                        <% else %>
-                                            <%= link_to(new_user_session_path, class: "btn btn-default add-to-cart") do %>
-                                                <i class="fa fa-sign-in"></i>Please login
-                                            <% end %>
-                                        <% end %>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <!-- <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li> -->
-                                    <li>
-                                        <%= link_to(listing_detail_public_index_path(:id => list.id), remote: true) do %>
-                                            <i class="fa fa-plus-square"></i>View Details</a>
-                                        <% end %>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <%= render 'public/category_row', listing: list %>
                     </div>
-                    <% end %>
-                </div><!--features_items-->             
-            </div>
+                <% end %>
+            </div><!--features_items-->             
         </div>
     </div>
 </section>

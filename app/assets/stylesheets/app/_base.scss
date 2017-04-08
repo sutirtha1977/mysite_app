@@ -6,7 +6,15 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  background: $lightgray;
+  // background: $lightgray;
+  background-color:$dark;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: $heavy;}
@@ -14,10 +22,10 @@ h2 { margin: 0 0 .5em 0; font-size: 1.6em; font-weight: $heavy;}
 h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: $heavy;}
 h4 { margin: 0 0 .5em 0; font-size: 1em; font-weight: $heavy;}
 
-p { 
-  margin: 0 0 1em 0; 
-  font-weight: $thin;
-}
+// p { 
+//   margin: 0 0 1em 0; 
+//   font-weight: $thin;
+// }
 
 .main {
   position: relative;
@@ -33,6 +41,7 @@ p {
   border-radius: 6px;
   @include big-shadow();
   min-height: 570px;
+  padding: 1em;
 }
 
 .main-raised { margin: 4em 2em; }
@@ -57,24 +66,11 @@ strong {
 
 .title-one {
   display: inline-block;
-  font-size: 2.5em;
+  // font-size: 2.5em;
   padding-bottom:.6em;
   position:relative
 }
-.title-one:before {
-    color: $orange;
-    content: "||";
-    left: -40px;
-    position: absolute;
-    top: 0;
-}
-.title-one:after{
-    color: $orange;
-    content: "||";
-    position: absolute;
-    right: -40px;
-    top: -2px;
-}
+
 
 .modal {
   .modal-content {
