@@ -7,7 +7,7 @@
 	h2 { font-size: 1.8em; }
 	h3 { font-size: 1.4em; }
 	h4 { font-size: 1.4em; }
-
+    
     .navbar-transparent{
         // padding-top: 15px;
         background-color: rgba(0, 0, 0, 0.45);
@@ -154,6 +154,25 @@
     }
     
 }
+
+/************************************ 
+team page start 
+************************************/
+
+@media screen and (max-width: 959px) {
+    #team .member {
+        .info {
+            margin: 1em 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+/************************************ 
+team page end 
+************************************/
+
 /************************************ 
 gallery Isotope start 
 ************************************/

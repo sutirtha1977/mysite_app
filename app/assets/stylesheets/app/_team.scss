@@ -3,43 +3,65 @@
 	  	margin: 10px 0;
 		h3 {
 		  font-weight: $bold;
-		  font-size: 1.2em;
-		  color: $dark;
-		  // padding-bottom: 5px;
+		  // font-size: 1.2em;
+		  // color: $dark;
+		  padding-bottom: .5em; 
+		  // text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+		  color: $red;
 		}
 		h4 {
-			color: $dark;
+			// color: $dark;
 			font-size: 1em;
-			padding-bottom: 5px; 
+			padding-bottom: .5em; 
+			// text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+			// color: $purple;
+		}
+		.socials {
+			padding-bottom: .5em; 	
 		}
 		p {
-		  font-size: .8em;
+		  // font-size: .8em;
 		  font-weight: $normal;
+		  padding-bottom: .5em; 
+		  color: $blue;
 		}
 		img {
 			height: 100%;
 		  	width: 100%;
 		  	@include shadow-z-5();
 		}
+		.btn {
+			font-weight: $bold;
+			background: $purple;
+			color: $light;
+			&:hover, &:focus {
+				background: $light;
+				color: $purple;				
+			}
+			-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out; 
+		}
 	}
 	.socials i {
 		background-color:$light;
 		border-radius: 50%;
-		color: #43484E;
+		color: darken($gray, 20);
 		display: inline-block;
-		font-size:16px;
+		font-size:1em;
 		height: 30px;
 		line-height:28px;
 		margin-right: 5px;
 		text-align: center;
 		width: 30px;
 		border-width:1px;
-		border-color:#43484E;
+		border-color:darken($gray, 20);
 		border-style: solid;
 		opacity:.5;
-		//  -webkit-transition: all 0.5s ease-in-out;
-		// -moz-transition: all 0.5s ease-in-out;
-		// -o-transition: all 0.5s ease-in-out;
+		 -webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out; 
 		@include shadow-z-3(); 
 	}
@@ -55,17 +77,22 @@
 		}
 
 		.fa-twitter:hover {
-		  background:#29C5F6
+		  background:#29C5F6;
 		}
 
 		.fa-linkedin:hover {
-		  background:#006DC0
+		  background:#006DC0;
 		}
 
 		.fa-google:hover {
-		  background:#D13D2F
+		  background:#D13D2F;
 		}
-
+		.fa-envelope:hover {
+		  background:$gray;
+		}
+		.fa-phone:hover {
+		  background:$dark;
+		}
 	}
 
 	.btn {
