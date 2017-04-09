@@ -1,6 +1,7 @@
 #list-details {
+	position: relative;
 	.product-det {
-		margin: 1.25em;
+		margin-bottom: 1.25em;
 		.image-left img {
 			@include shadow-z-2();
 		}
@@ -72,7 +73,7 @@
 
 	.product-info {
 		@include big-shadow();
-		margin: 1.25em;
+		margin-bottom: 1.25em;
 		border-radius: 1.125em;
 		.nav {
 			padding: 1.25em;
@@ -80,11 +81,13 @@
 			li a {
 				background: $lightgray;
 				color: $red;
+				font-style: italic;
 			}
 			li.active a {
 				@include big-shadow();
 				background: $red;
 				color: $light;
+				font-style: inherit;
 			}
 		}
 		#myTabContent {
@@ -94,11 +97,31 @@
 				text-transform: capitalize;
 			}
 			#service-two {
-				p span {
-					font-size: .8em;
-					text-transform: none;
-					font-weight: $bold;
-					color: $blue;
+				p { 
+					font-style: italic;
+					span {
+						font-size: .8em;
+						text-transform: none;
+						font-weight: $bold;
+						color: $blue;
+						margin-left: 1em;
+						
+					}
+				}
+				.row {
+					margin-bottom: 1em;
+					padding-bottom: .5em;
+					border-bottom: 2px solid $yellow;
+				}
+				a {
+					text-decoration: none;
+					font-size: .9em;
+					// padding: .6em;
+					// border: 1px solid $dark;
+					// @include shadow-2dp();
+				}
+				.review-edit {
+					display: none;
 				}
 			}			
 		}

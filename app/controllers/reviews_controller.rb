@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
 	before_action :get_data
-	before_action :find_review, only: [:update, :destroy]
-
+	before_action :find_review, only: [:edit, :update, :destroy]
 
 	def create
 		@review = Review.new(review_params)
@@ -9,19 +8,19 @@ class ReviewsController < ApplicationController
 		@review.user_id = current_user.id
 		@review.save
 		
-		flash[:notice] = "Thanks for your review"
+		# flash[:notice] = "Thanks for your review"
 		render 'public/listing_detail.js.erb'
 	end
 
 	def update
 		@review.update(review_params)
-		flash[:notice] = "Review updated successfully"
+		# flash[:notice] = "Review updated successfully"
 		render 'public/listing_detail.js.erb'
 	end
 
 	def destroy
 		@review.destroy
-		flash[:alert] = "Review deleted successfully"
+		# flash[:alert] = "Review deleted successfully"
 		render 'public/listing_detail.js.erb'
 	end
 

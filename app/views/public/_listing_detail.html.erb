@@ -1,50 +1,56 @@
 <div class="main-raised">
-<section id="list-details">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="title-one"><strong><%= @list_details.name %></strong></h2>
-        </div>
-    </div>
-    <div class="container product-det"> 
-        <div class="row">
-            <div class="col-sm-4 image-left">
-                <%= images(@list_details.image_loc, {class: "img-responsive"}, "listing") %>
+    <section id="list-details">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title-one"><strong><%= @list_details.name %></strong></h2>
             </div>
-            <div class="col-sm-8">
-                <div class="list-name"><%= @list_details.name %></div>
-                <div class="list-sdesc"><%= @list_details.short_desc %></div>
-                <div class="curr-price"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ",:precision => 0) %></div>
+        </div>
+        <div class="container product-det"> 
+            <div class="row">
+                <div class="col-sm-4 image-left">
+                    <%= images(@list_details.image_loc, {class: "img-responsive"}, "listing") %>
+                </div>
+                <div class="col-sm-8">
+                    <div class="list-name"><%= @list_details.name %></div>
+                    <div class="list-sdesc"><%= @list_details.short_desc %></div>
+                    <div class="curr-price"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ",:precision => 0) %></div>
 
-                <% if user_signed_in? %>
-                    <%= form_for @order_item, remote: true do |f| %>
-                        <%= f.hidden_field :listing_id, value: @list_details.id %>
-                        <%= f.hidden_field :user_id, value: current_user.id %>
-                        <%= f.hidden_field :quantity, value: 1 %>
-                        <%= f.submit "Add to Cart", class: "btn" %>
-                    <% end %>
-                <% end %> 
-                <div class="review">
-                    <a href="#" class="review-open">Write a review</a>
-                    <%= render 'public/review_form' %> 
+                    <% if user_signed_in? %>
+                        <%= form_for @order_item, remote: true do |f| %>
+                            <%= f.hidden_field :listing_id, value: @list_details.id %>
+                            <%= f.hidden_field :user_id, value: current_user.id %>
+                            <%= f.hidden_field :quantity, value: 1 %>
+                            <%= f.submit "Add to Cart", class: "btn" %>
+                        <% end %>
+                    <% end %> 
+                    <div class="review">
+                        <span class="average-rating" data-score="<%= ((@list_details.reviews.count > 0) ? (@list_details.reviews.average(:rating).round(2)) : 0)  %>"></span>
+                        <a href="#" class="review-open">Write a review</a>
+                        <%= render 'public/review_form' %> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="container product-info"> 
+            <div class="row">
+                <ul id="myTab" class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="#service-one" data-toggle="tab">Description</a></li>
+                    <li role="presentation"><a href="#service-two" data-toggle="tab">Reviews</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="service-one">
+                        <%= @list_details.long_desc %>
+                    </div>
+                    <div class="tab-pane fade container" id="service-two">
+                        <% if @list_details.reviews.count > 0 %>
+                        <%= render @list_details.reviews.newest_first %> 
+                        <% else %>
+                            <p>No reviews!! Please provide your feedback ...</p>
+                        <% end %>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> 
-    <div class="container product-info"> 
-        <div class="row">
-            <ul id="myTab" class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#service-one" data-toggle="tab">Description</a></li>
-                <li role="presentation"><a href="#service-two" data-toggle="tab">Reviews</a></li>
-            </ul>
-            <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade in active" id="service-one">
-                    <%= @list_details.long_desc %>
-                </div>
-                <div class="tab-pane fade" id="service-two">
-                    <%= render @list_details.reviews %>                   
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 </div>
+ 

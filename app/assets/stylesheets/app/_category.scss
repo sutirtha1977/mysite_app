@@ -19,10 +19,11 @@
       .btn {
         margin: 1em 1em 1.5em 1em;
         border-radius: .5em;
-        font-weight: $bold;
+        font-weight: $normal;
         color: $blue;
         text-transform: uppercase;
         @include shadow-4dp();
+        font-style: italic;
         -webkit-transition: all 0.5s ease-in-out;
         -moz-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
@@ -35,6 +36,7 @@
       .btn.active {
         background-color: $red;
         color: $light;
+        font-style: inherit;
       }
     }
     .product-image-wrapper{

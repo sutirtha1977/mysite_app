@@ -1,21 +1,20 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-2">
-			<span class="product-rating" data-score="<%= review.rating %>"></span>
-		</div>
-		<div class="col-sm-8">
-			<p><%= review.comment %> <span> Created <%= time_ago_in_words(review.created_at) unless review.created_at.blank? %> ago</span></p>	
-		</div>
-		<% if user_signed_in? %>
-			<% if review.user_id == current_user.id %>
-				<div class="col-sm-2">
-				<%= link_to "Edit", listing_review_path(review.listing, review) %>
-				<%= link_to "Delete", listing_review_path(review.listing, review), method: :delete, remote: true %>
-				</div>
-			<% end %>
-		<% end %>
+<div class="row">
+	<div class="col-sm-2">
+		<span class="product-rating" data-score="<%= review.rating %>"></span>
 	</div>
+	<div class="col-sm-8">
+		<p><%= review.comment %> <span> Created <%= time_ago_in_words(review.created_at) unless review.created_at.blank? %> ago</span></p>	
+	</div>
+	<% if user_signed_in? %>
+		<% if review.user_id == current_user.id %>
+			<div class="col-sm-2">
+			<a href="#" class="">Edit</a>
+			<%= link_to "Delete", listing_review_path(review.listing, review), method: :delete, remote: true %>
+			</div>
+		<% end %>
+	<% end %>
 </div>
+
 
 
 

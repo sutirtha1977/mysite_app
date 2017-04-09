@@ -1,6 +1,6 @@
 $(".main").html("<%= j (render 'public/listing_detail') %>")
 /************************************ 
-product rating start 
+rating start 
 ************************************/
 $('.product-rating').raty({
     readOnly: true,
@@ -9,8 +9,15 @@ $('.product-rating').raty({
     },
     path: '/assets/'
 });
+$('.average-rating').raty({
+    readOnly: true,
+    score: function () {
+        return $(this).attr('data-score');
+    },
+    path: '/assets/'
+});
 /************************************ 
-product rating end 
+rating end 
 ************************************/
 /************************************ 
 form rating start 
@@ -20,6 +27,7 @@ $('#rating-form').raty({
     path: '/assets/',
     scoreName: 'review[rating]'
 });
+
 /************************************ 
 form rating end 
 ************************************/
