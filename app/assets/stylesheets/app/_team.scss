@@ -3,24 +3,17 @@
 	  	margin: 10px 0;
 		h3 {
 		  font-weight: $bold;
-		  // font-size: 1.2em;
-		  // color: $dark;
 		  padding-bottom: .5em; 
-		  // text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
 		  color: $red;
 		}
 		h4 {
-			// color: $dark;
 			font-size: 1em;
 			padding-bottom: .5em; 
-			// text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
-			// color: $purple;
 		}
 		.socials {
 			padding-bottom: .5em; 	
 		}
 		p {
-		  // font-size: .8em;
 		  font-weight: $normal;
 		  padding-bottom: .5em; 
 		  color: $blue;
@@ -94,12 +87,9 @@
 		  background:$dark;
 		}
 	}
-
 	.btn {
 		@include shadow-8dp-color($dark);
-		// box-shadow: 5px 5px 5px $dark;
 	}
-
 }
 
 

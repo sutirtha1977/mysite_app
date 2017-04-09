@@ -2,7 +2,7 @@
 	<div class="single-products">
 		<div class="productinfo text-center">
 			<%= images(listing.image_loc, {class: "img-responsive"}, "listing") %>
-			<h2><%= number_to_currency(listing.curr_price, :unit => "Rs. ") %></h2>
+			<h2><%= number_to_currency(listing.curr_price, :unit => "Rs. ",:precision => 0) %></h2>
 			<p><%= listing.name %></p>
 			<% if user_signed_in? %>
 			<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
@@ -35,7 +35,7 @@
 		<ul class="nav nav-pills nav-justified">
 			<li>
 				<%= link_to(listing_detail_public_index_path(:id => listing.id), remote: true) do %>
-					<i class="fa fa-plus-square"></i>View Details</a>
+					<i class="fa fa-angle-double-right"></i>View Details</a>
 				<% end %>
 			</li>
 		</ul>

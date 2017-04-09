@@ -1,38 +1,39 @@
 #list-details {
 	.product-det {
-		margin: 20px 0;
+		margin: 1.25em;
 		.image-left img {
 			@include shadow-z-2();
 		}
 		.list-name {
 			font-size: 1.3em;
 			font-weight: $heavy;
-			color: $blue;
-			margin: 10px 0;
+			color: $red;
+			margin: .6em 0;
 		}
 		.list-sdesc {
 			font-size: 1em;
 			font-weight: $bold;
-			color: $blue;
-			margin: 10px 0;
+			color: $gray;
+			margin: .6em 0;
 		}
 		.review {
-			margin: 10px 0;
+			margin: .6em 0;
 			a {
 				font-size: .9em;
 				margin-left: 5px;
 			}
 			#review-form {
-				padding: 10px;
-				// border: 1px solid $gray;
+				padding: 1em;
 				@include shadow-2dp();
-				border-radius: 20px 0;
-				margin: 10px 0;
-				label {
-					font-size: .9em;
-					font-weight: $normal;
+				border: 2px solid $purple;
+				border-radius: 1.125em;
+				margin: .6em 0;
+				#rating-form, .review_comment {
+					padding: .5em;
 				}
+
 				.btn {
+					margin: .5em;
 					text-transform: uppercase;
 					color: $blue;
 					background-color: $light;
@@ -53,12 +54,15 @@
 
 		.btn {
 			text-transform: uppercase;
-			margin: 10px 0;
-			// border: 1px solid #fc7700;
+			margin: .6em 0;
 			color: $red;
 			background-color: $light;
-			// border-color: #fc7700;
-			@include shadow-2dp();
+			border-radius: .5em;
+			@include shadow-6dp();
+		    -webkit-transition: all 0.5s ease-in-out;
+		    -moz-transition: all 0.5s ease-in-out;
+		    -o-transition: all 0.5s ease-in-out;
+		    transition: all 0.5s ease-in-out; 
 			&:hover {
 				background-color: $red;
 				color:$light;					
@@ -72,18 +76,12 @@
 
 	.product-info {
 		@include big-shadow();
-		border-radius: 20px 0;
-		margin: 20px 0;
-		padding: 20px;
-		ul {
-			// font-size: .5em;
-			// font-weight: $bold;
-			// &:hover {
-			// 	font-size: 1.1em;
-			// }
+		// border-radius: 1.125em;
+		margin: 1.25em;
+		.nav {
+			padding: 1.25em;
 		}
 		#service-one, #service-two{
-			// border: 1px solid;
 			font-weight: $normal;
 			padding: 20px;
 		}

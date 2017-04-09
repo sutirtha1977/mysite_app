@@ -1,13 +1,9 @@
 .navbar{
     border: 0 none;
     transition: all 0.4s;
-    // -webkit-transition: all 0.4s;
     font-size: 14px;
-    // border: 1px solid $dark;
     .navbar-brand {
         font-weight: $heavy;
-        // margin-top: 13px;
-        // margin-bottom: 13px;
         font-size: 2em;
         padding: .5em 1em;
         background: $red;
@@ -31,10 +27,6 @@
         background: $light;
         color: $red;
     }
-    // .nav .caret{
-    //     border-bottom-color: #FFFFFF;
-    //     border-top-color: #FFFFFF;
-    // }
 }
 .navbar-transparent .navbar-brand, [class*="navbar-ct"] .navbar-brand{
     color: #FFFFFF;
@@ -50,7 +42,6 @@
     padding: .5em 1em;
     background: $baseblue;
     @include big-shadow();
-    // box-shadow: 5px 5px 5px $dark;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -135,8 +126,6 @@
     text-decoration: none;
 }
 .navbar-toggle{
-    // margin-bottom: 27px;
-    // margin-top: 27px;
     border: 2px solid $red;
     border-radius: 5px;
     background: $light;

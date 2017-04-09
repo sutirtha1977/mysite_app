@@ -22,17 +22,10 @@ h2 { margin: 0 0 .5em 0; font-size: 1.6em; font-weight: $heavy;}
 h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: $heavy;}
 h4 { margin: 0 0 .5em 0; font-size: 1em; font-weight: $heavy;}
 
-// p { 
-//   margin: 0 0 1em 0; 
-//   font-weight: $thin;
-// }
+
 
 .main {
   position: relative;
-  // background: $lightgray;
-  // margin: 0px 2em 0px;
-  // border-radius: 6px;
-  // @include big-shadow();
 }
 
 .main-raised, .home-raised {
@@ -116,34 +109,6 @@ strong {
   margin-top: 100px;
   z-index: 100;
 }
-
-// @media (max-width: 768px) {
-//   .title-one {
-//     font-size: 1.5em;
-//   }
-//   .main-raised {
-//     margin: 0px;
-//     border-radius: 0;
-//     box-shadow: none;
-//     // padding: 0 20px;
-//   }
-//   .page {
-//     padding: 0 20px;
-//   }
-// }
-// @media (min-width: 768px) and (max-width: 992px) {
-//   .section-header {
-//       padding: 60px 0 20px 0;
-//   }
-// }
-
-// .modal .modal-header .close:hover, .modal .modal-header .close:focus {
-//   opacity: 1;
-//   color: $gray;
-// }
-// .modal-backdrop {
-//   background: rgba(0, 0, 0, 0);
-// }
 
 a#scrollUp {
   bottom: 60px;

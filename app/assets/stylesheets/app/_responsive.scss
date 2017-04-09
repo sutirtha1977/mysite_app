@@ -60,9 +60,19 @@
 }
 
 @media screen and (max-width: 425px) {
-
-
-
+    .main-raised { margin: 2em 0; }
+    .home-raised { margin: -2em 0 2em 0; }
+    #list-details {
+        .product-det, .product-info {margin: .5em;}
+        font-size: .9em;  
+        .review #review-form {
+            margin: .2em 0;
+            padding: .5em;
+            #rating-form, .review_comment, .btn {
+                padding: .2em;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px){

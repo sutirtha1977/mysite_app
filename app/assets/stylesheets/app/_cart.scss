@@ -31,11 +31,9 @@
 		}
 	}
 	.dataTables_info {
-		// color: $red;
 		display: none;
 	}
 	.dataTables_paginate {
-		// color: $red;
 		.pagination {
 			@include shadow-2dp();
 		}
@@ -52,14 +50,10 @@
 	.table-advance {
 		margin: 10px 0 !important;
 		thead {
-			// @include big-shadow();
 			@include shadow-4dp();
-			// background-color: $baseblue;
 			background-color: $dark;
 			margin-bottom: 20px;
 			tr th {
-				// @include shadow-2dp();
-				// text-align: center;
 				font-size: 1.1em;
 				font-weight: $normal;
 				color: $light;
@@ -68,7 +62,6 @@
 		}
 		tbody tr td {
 			.input-group {
-				// @include shadow-4dp();
 				.input-group-addon {
 					background-color: $light;
 					border: 0;
@@ -104,24 +97,6 @@
 			}
 		}
 	}
-	// @media screen and (max-width: 480px) {
-	// 	.dataTables_length {
-	// 		margin-bottom: 10px;
-	// 	}
-	// 	.table-advance{
-	// 		// float:right;
-	// 		// margin-right: 10px;
-	// 		thead { display: none; }
-	// 	}
-	// }
-	// @media screen and (max-width: 767px) {
-	// 	.dataTables_length {
-	// 		margin-bottom: 10px;
-	// 	}
-	// 	.dataTables_length, .dataTables_filter {
-	// 		text-align: right;
-	// 	}
-	// }
 }
 
 

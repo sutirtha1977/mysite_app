@@ -1,19 +1,15 @@
 #category {
-
   .features_items{
     overflow:hidden;
     h2.title {
       color: $light;
-      // font-family: 'Roboto', sans-serif;
       background-color: $red;
       font-size: 1.2em;
       font-weight: $heavy;
       margin: 10px 15px;
       text-transform: uppercase;
       padding: 5px;
-      // margin-bottom: 30px;
       position: relative;
-      // border: 1px solid $dark;
       @include shadow-4dp();
     }
     .list-inline {
@@ -22,15 +18,10 @@
       }
       .btn {
         margin: 10px 10px 20px 10px;
-        // border: 1px solid $dark;
         border-radius: 0;
         font-weight: $bold;
-        // background-color: lighten($baseblue,20);
         color: $blue;
         @include shadow-4dp();
-        &:hover {
-          // font-size: 1.1em;
-        }
       }
       .btn.active {
         background-color: $dark;
@@ -54,12 +45,10 @@
           position:relative;
           h2{
             color: $red;
-            // font-family: 'Roboto', sans-serif;
             font-size: 1.4em;
             font-weight: $heavy;
           }
           p{
-            // font-family: 'Roboto', sans-serif;
             font-size: .9em;
             font-weight: $normal;
             color: #696763;
@@ -69,13 +58,11 @@
             margin-bottom: 1em;
           }
           .add-to-cart {
-            // background:#F5F5ED;
+            text-transform: uppercase;
             background-color: $light;
             border: 0 none;
             border-radius: 0;
-            // color: $dark;
             color: $red;
-            // font-family: 'Roboto', sans-serif;
             font-size: .9em;
             margin-bottom: 25px;
             i{
@@ -103,19 +90,16 @@
             width: 100%;
             h2{
               color: #fff;
-              // font-family: 'Roboto', sans-serif;
               font-size: 1.4em;
               font-weight: $heavy;
             }
 
             .add-to-cart {
-              // background:#fff;
+              text-transform: uppercase;
               background-color: $light;
               border: 0 none;
               border-radius: .5em;
-              // color: $dark;
               color: $red;
-              // font-family: 'Roboto', sans-serif;
               font-size: .9em;
               margin-top: 1em;
               margin-bottom: 1.5em;
@@ -134,7 +118,6 @@
             }
           }
           p{
-            // font-family: 'Roboto', sans-serif;
             font-size: .9em;
             font-weight: $normal;
             color: #fff;
@@ -144,10 +127,8 @@
       .choose {
         border-top: 1px solid #F7F7F0;
         ul li a {
-          // color: #B3AFA8;
-          color: $gray;
-          // font-family: 'Roboto', sans-serif;
-          font-size: .9em;
+          color: $blue;
+          font-weight: $normal;
           padding-left: 0;
           padding-right: 0;
           -webkit-transition: all 0.5s ease-in-out;
@@ -157,7 +138,6 @@
           &:hover{
             background:none;
             color:#FE980F;
-            // font-size: 1.1em;
           }
           i{
             margin-right:5px;
@@ -167,12 +147,5 @@
     }
   }
 }
-
-// .new, .sale {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-// }
-
 
 

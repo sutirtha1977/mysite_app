@@ -7,7 +7,7 @@
     </div>
     <div class="container product-det"> 
         <div class="row">
-            <div class="product col-sm-4 image-left">
+            <div class="col-sm-4 image-left">
                 <%= images(@list_details.image_loc, {class: "img-responsive"}, "listing") %>
             </div>
             <div class="col-sm-8">
@@ -18,14 +18,14 @@
                     <a href="#" class="review-open">Write a review</a>
                     <%= render 'public/review_form' %> 
                 </div>
-                <div class="curr-price"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ") %></div>
+                <div class="curr-price"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ",:precision => 0) %></div>
 
                 <% if user_signed_in? %>
                     <%= form_for @order_item, remote: true do |f| %>
                         <%= f.hidden_field :listing_id, value: @list_details.id %>
                         <%= f.hidden_field :user_id, value: current_user.id %>
                         <%= f.hidden_field :quantity, value: 1 %>
-                        <%= f.submit "Add to Cart", class: "btn btn-sm" %>
+                        <%= f.submit "Add to Cart", class: "btn" %>
                     <% end %>
                 <% end %> 
             </div>
@@ -33,24 +33,18 @@
     </div> 
     <div class="container product-info"> 
         <div class="row">
-            <!-- <div class="col-sm-12"> -->
-                <ul id="myTab" class="nav nav-pills">
-                    <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-                    <li><a href="#service-two" data-toggle="tab">REVIEWS</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="service-one">
-                        <!-- <section> -->
-                        <%= @list_details.long_desc %>
-                        <!-- </section>            -->
-                    </div>
-                    <div class="tab-pane fade" id="service-two">
-                        <!-- <section>     -->
-                        <%= render @list_details.reviews %>                   
-                        <!-- </section>   -->
-                    </div>
+            <ul id="myTab" class="nav nav-tabs nav-justified">
+                <li role="presentation" class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+                <li role="presentation"><a href="#service-two" data-toggle="tab">REVIEWS</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="service-one">
+                    <%= @list_details.long_desc %>
                 </div>
-            <!-- </div>                -->
+                <div class="tab-pane fade" id="service-two">
+                    <%= render @list_details.reviews %>                   
+                </div>
+            </div>
         </div>
     </div>
 </section>
