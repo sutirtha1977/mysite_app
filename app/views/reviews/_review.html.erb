@@ -1,10 +1,10 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-2">
-			<p><%= review.rating %></p>
+			<span class="product-rating" data-score="<%= review.rating %>"></span>
 		</div>
 		<div class="col-sm-8">
-			<p><%= review.comment %></p>	
+			<p><%= review.comment %> <span> Created <%= time_ago_in_words(review.created_at) unless review.created_at.blank? %> ago</span></p>	
 		</div>
 		<% if user_signed_in? %>
 			<% if review.user_id == current_user.id %>

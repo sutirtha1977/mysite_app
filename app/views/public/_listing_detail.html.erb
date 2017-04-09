@@ -13,11 +13,6 @@
             <div class="col-sm-8">
                 <div class="list-name"><%= @list_details.name %></div>
                 <div class="list-sdesc"><%= @list_details.short_desc %></div>
-                <div class="review">
-                    <span class="product-rating" data-score=""></span>
-                    <a href="#" class="review-open">Write a review</a>
-                    <%= render 'public/review_form' %> 
-                </div>
                 <div class="curr-price"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ",:precision => 0) %></div>
 
                 <% if user_signed_in? %>
@@ -28,14 +23,18 @@
                         <%= f.submit "Add to Cart", class: "btn" %>
                     <% end %>
                 <% end %> 
+                <div class="review">
+                    <a href="#" class="review-open">Write a review</a>
+                    <%= render 'public/review_form' %> 
+                </div>
             </div>
         </div>
     </div> 
     <div class="container product-info"> 
         <div class="row">
-            <ul id="myTab" class="nav nav-tabs nav-justified">
-                <li role="presentation" class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-                <li role="presentation"><a href="#service-two" data-toggle="tab">REVIEWS</a></li>
+            <ul id="myTab" class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#service-one" data-toggle="tab">Description</a></li>
+                <li role="presentation"><a href="#service-two" data-toggle="tab">Reviews</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="service-one">
