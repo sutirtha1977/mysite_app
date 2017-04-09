@@ -3,13 +3,13 @@
     overflow:hidden;
     h2.title {
       color: $light;
-      background-color: $red;
+      background-color: darken($green,30);
+      border-radius: .5em;
       font-size: 1.2em;
       font-weight: $heavy;
-      margin: 10px 15px;
+      margin: .5em 1em;
       text-transform: uppercase;
-      padding: 5px;
-      position: relative;
+      padding: .5em;
       @include shadow-4dp();
     }
     .list-inline {
@@ -17,14 +17,23 @@
         padding: 0;
       }
       .btn {
-        margin: 10px 10px 20px 10px;
-        border-radius: 0;
+        margin: 1em 1em 1.5em 1em;
+        border-radius: .5em;
         font-weight: $bold;
         color: $blue;
+        text-transform: uppercase;
         @include shadow-4dp();
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; 
+        &:hover {
+          background: $blue;
+          color: $light;
+        }
       }
       .btn.active {
-        background-color: $dark;
+        background-color: $red;
         color: $light;
       }
     }
@@ -127,7 +136,7 @@
       .choose {
         border-top: 1px solid #F7F7F0;
         ul li a {
-          color: $blue;
+          color: $dark;
           font-weight: $normal;
           padding-left: 0;
           padding-right: 0;

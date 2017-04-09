@@ -1,12 +1,12 @@
 @media screen and (max-width: 1000px) {
-	h1 { font-size: 2.5em; }
+    h1 { font-size: 2.5em; }
 }
 
 @media screen and (max-width: 768px) {
-	h1 { font-size: 2.2em; }
-	h2 { font-size: 1.8em; }
-	h3 { font-size: 1.4em; }
-	h4 { font-size: 1.4em; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.4em; }
+    h4 { font-size: 1.4em; }
     
     .navbar-transparent{
         // padding-top: 15px;
@@ -47,10 +47,10 @@
 }
 
 @media screen and (max-width: 625px) {
-	h1 { font-size: 1.8em; }
-	h2 { font-size: 1.4em; }
-	h3 { font-size: 1.2em; }
-	h4 { font-size: 1em; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.2em; }
+    h4 { font-size: 1em; }
 
 	#nav-top {
 		ul li {
@@ -59,7 +59,7 @@
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 667px) {
     .main-raised { margin: 2em 0; }
     .home-raised { margin: -2em 0 2em 0; }
     #list-details {
@@ -75,7 +75,7 @@
     }
 }
 
-@media (min-width: 768px){
+@media screen and (min-width: 768px){
     .navbar-nav > li > .dropdown-menu{
         display: block;
         padding: 0;
@@ -236,4 +236,8 @@ bootstrap container adjustment start
 /************************************ 
 bootstrap container adjustment end 
 ************************************/
+
+@media screen and (min-width: 600px) and (max-width: 687px){
+    .container{max-width: 590;width: 590px;}
+}
 

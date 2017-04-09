@@ -29,7 +29,6 @@ h4 { margin: 0 0 .5em 0; font-size: 1em; font-weight: $heavy;}
 }
 
 .main-raised, .home-raised {
-  position: relative;
   background: $light;
   border-radius: 6px;
   @include big-shadow();
@@ -59,7 +58,6 @@ strong {
 
 .title-one {
   display: inline-block;
-  // font-size: 2.5em;
   padding-bottom:.6em;
   position:relative
 }
