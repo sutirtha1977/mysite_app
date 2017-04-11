@@ -24,7 +24,7 @@
                         <% end %>
                     <% end %> 
                     <div class="review">
-                        <span class="average-rating" data-score="<%= ((@list_details.reviews.count > 0) ? (@list_details.reviews.average(:rating).round(2)) : 0)  %>"></span>
+                        <span class="average-rating" data-score="<%= ((@list_details.reviews.sum(:rating) > 0) ? (@list_details.reviews.average(:rating).round(2)) : 0)  %>"></span>
                         <a href="#" class="review-open">Write a review</a>
                         <%= render 'public/review_form' %> 
                     </div>
