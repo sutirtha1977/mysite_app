@@ -104,7 +104,7 @@
 			#service-two {
 				p { 
 					font-style: italic;
-					span {
+					.review-created {
 						font-size: .8em;
 						text-transform: none;
 						font-weight: $bold;

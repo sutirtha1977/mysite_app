@@ -11,11 +11,17 @@ class ReviewsController < ApplicationController
 		render 'public/listing_detail.js.erb'
 	end
 
+	# def update
+	# 	@review.update(review_params)
+	# 	render 'public/listing_detail.js.erb'
+	# end
 	def update
-		@review.update(review_params)
-		render 'public/listing_detail.js.erb'
+		respond_to do |format|
+			@review.update(review_params)
+			format.js {'public/listing_detail.js.erb'}
+			format.json {respond_with_bip(@review)}
+		end
 	end
-
 	def destroy
 		@review.destroy
 		render 'public/listing_detail.js.erb'
