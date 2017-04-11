@@ -43,7 +43,9 @@
                     </div>
                     <div class="tab-pane fade container" id="service-two">
                         <% if @list_details.reviews.count > 0 %>
-                        <%= render @list_details.reviews.newest_first %> 
+                            <% @list_details.reviews.newest_first.each do |review| %> 
+                                <%= render 'public/review_row', review: review %>   
+                            <% end %>
                         <% else %>
                             <p>No reviews!! Please provide your feedback ...</p>
                         <% end %>

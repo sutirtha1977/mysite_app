@@ -56,9 +56,6 @@
 			background-color: $light;
 			border-radius: .5em;
 			@include shadow-6dp();
-		    -webkit-transition: all 0.5s ease-in-out;
-		    -moz-transition: all 0.5s ease-in-out;
-		    -o-transition: all 0.5s ease-in-out;
 		    transition: all 0.5s ease-in-out; 
 			&:hover {
 				background-color: $red;
@@ -79,15 +76,23 @@
 			padding: 1.25em;
 		    li { margin-right: 1em;} 
 			li a {
-				background: $lightgray;
+				// background: $lightgray;
+				border: 1px solid $lightgray;
 				color: $red;
 				font-style: italic;
+				transition: all 0.5s ease-in-out; 
+				&:hover {
+					background: $red;
+					color: $light;	
+					font-style: inherit;				
+				}
 			}
 			li.active a {
 				@include big-shadow();
 				background: $red;
 				color: $light;
 				font-style: inherit;
+				border: none;
 			}
 		}
 		#myTabContent {
@@ -112,16 +117,32 @@
 					margin-bottom: 1em;
 					padding-bottom: .5em;
 					border-bottom: 2px solid $yellow;
-				}
-				a {
-					text-decoration: none;
-					font-size: .9em;
-					// padding: .6em;
-					// border: 1px solid $dark;
-					// @include shadow-2dp();
+					&:last-child {
+						border-bottom: none;
+					}
 				}
 				.review-edit {
 					display: none;
+				}
+
+				.btn-edit , .btn-del {
+					border: 1px solid $dark;
+				} 
+				.btn-edit {
+					color: $blue;
+					transition: all 0.5s ease-in-out; 
+					&:hover {
+						background: $blue;
+						color: $light;
+					}
+				}
+				.btn-del {
+					color: $red;
+					transition: all 0.5s ease-in-out; 
+					&:hover {
+						background: $red;
+						color: $light;
+					}
 				}
 			}			
 		}

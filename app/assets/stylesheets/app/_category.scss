@@ -24,13 +24,11 @@
         text-transform: uppercase;
         @include shadow-4dp();
         font-style: italic;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out; 
-        &:hover {
-          background: $blue;
+        &:hover, &:focus {
+          background: $red;
           color: $light;
+          font-style: inherit;
         }
       }
       .btn.active {
@@ -87,9 +85,6 @@
           display: none;
           height: 0;
           position: absolute;
-          -webkit-transition: height 500ms ease 0.1s;
-          -moz-transition: height 500ms ease 0.1s;
-          -o-transition: height 500ms ease 0.1s;
           transition: height 500ms ease 0.1s; 
           width: 100%;
           display: block;
@@ -115,9 +110,6 @@
               margin-top: 1em;
               margin-bottom: 1.5em;
               @include shadow-6dp();
-              -webkit-transition: all 0.5s ease-in-out;
-              -moz-transition: all 0.5s ease-in-out;
-              -o-transition: all 0.5s ease-in-out;
               transition: all 0.5s ease-in-out; 
               i{
                 margin-right:5px;
@@ -138,17 +130,15 @@
       .choose {
         border-top: 1px solid #F7F7F0;
         ul li a {
-          color: $dark;
+          color: $blue;
           font-weight: $normal;
           padding-left: 0;
           padding-right: 0;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out; 
           &:hover{
             background:none;
-            color:#FE980F;
+            color: #FE980F;
+            transform: scale(1.2);
           }
           i{
             margin-right:5px;
@@ -158,5 +148,3 @@
     }
   }
 }
-
-

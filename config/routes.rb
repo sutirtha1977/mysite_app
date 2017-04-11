@@ -24,7 +24,8 @@ Rails.application.routes.draw do
 	end
 
 	resources :listings do
-		resources :reviews, only: [:create, :update, :destroy]
+		# resources :reviews, only: [:create, :update, :destroy]
+		resources :reviews
 	end
 	# resources :listings do
 	# 	resources :reviews, only: [:create, :update, :destroy] do

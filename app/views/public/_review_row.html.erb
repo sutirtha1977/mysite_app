@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-2">
+        <span class="product-rating" data-score="<%= review.rating %>"></span>
+    </div>
+    <div class="col-sm-8">
+        <p><%= review.comment %> <span> Created <%= time_ago_in_words(review.created_at) unless review.created_at.blank? %> ago</span></p>  
+    </div>
+    <% if user_signed_in? %>
+        <% if review.user_id == current_user.id %>
+            <div class="col-sm-2">
+                <%= link_to(listing_review_path(review.listing, review), 
+                    :remote => true,
+                    :class => "btn btn-sm btn-edit") do %>
+                    <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to(listing_review_path(review.listing, review), 
+                    :method => :delete,
+                    :remote => true,
+                    :class => "btn btn-sm btn-del") do %>
+                    <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+                <% end %> 
+            </div>
+        <% end %>
+    <% end %>
+</div>
