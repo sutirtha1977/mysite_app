@@ -2,7 +2,7 @@
     h1 { font-size: 2.5em; }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.8em; }
     h3 { font-size: 1.4em; }
@@ -45,6 +45,11 @@
     }
     .navbar-collapse{
         text-align: center;
+    }
+
+
+    #list-details .product-info #myTabContent #service-two p{
+        margin-top: 1em;
     }
 }
 

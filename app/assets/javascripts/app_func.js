@@ -7,6 +7,7 @@ $(function() {
     var topoffset = 52; 
 
     $('.best_in_place').best_in_place();
+    $(".best_in_place").on("click",function(){});
 
     $('.navbar-brand').click(function(e) {
         e.preventDefault();
