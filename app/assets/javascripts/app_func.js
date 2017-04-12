@@ -6,8 +6,13 @@ $(function() {
 
     var topoffset = 52; 
 
+    /************************************ 
+    Activating Best In Place start 
+    ************************************/
     $('.best_in_place').best_in_place();
-    $(".best_in_place").on("click",function(){});
+    /************************************ 
+    Activating Best In Place end 
+    ************************************/
 
     $('.navbar-brand').click(function(e) {
         e.preventDefault();
