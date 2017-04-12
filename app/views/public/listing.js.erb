@@ -1,1 +1,2 @@
 $(".main").html("<%= j (render 'public/listing') %>")
+document.title = "<%= @listing.first.product.name %>"

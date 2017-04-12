@@ -19,8 +19,8 @@
       <% end %>
     </div>
   </td>
-  <td class="text-center"><%= number_to_currency(order_item.unit_price, :unit => "Rs. ") %></td>
-  <td class="text-center"><%= number_to_currency(order_item.total_price, :unit => "Rs. ") %></td>
+  <td class="text-center"><%= number_to_currency(order_item.unit_price) %></td>
+  <td class="text-center"><%= number_to_currency(order_item.total_price) %></td>
   <td class="text-center">
     <%= link_to(order_item, method: :delete, remote: true, class: "btn btn-danger btn-circle btn-sm") do %>
       <i class="fa fa-trash-o" aria-hidden="true"></i>

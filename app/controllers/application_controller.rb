@@ -1,8 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
+  before_filter :set_locale
+
 
   helper_method :current_order
+
+
 
   def current_order
     # if !session[:order_id].nil?
@@ -15,5 +19,10 @@ class ApplicationController < ActionController::Base
     end 
   #   end
   end
-  
+
+private
+  def set_locale
+    I18n.locale = 'en-IN'
+  end
+
 end

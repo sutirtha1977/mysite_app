@@ -46,6 +46,8 @@ gem 'simple_form'
 
 gem 'best_in_place', '~> 3.0.1'
 
+gem 'rails-i18n', '~> 5.0.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -65,7 +67,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

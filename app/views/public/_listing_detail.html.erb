@@ -13,7 +13,7 @@
                 <div class="col-sm-8">
                     <div class="list-name"><%= @list_details.name %></div>
                     <div class="list-sdesc"><%= @list_details.short_desc %></div>
-                    <div class="curr-price"><%= number_to_currency(@list_details.curr_price, :unit => "Rs. ",:precision => 0) %></div>
+                    <div class="curr-price"><%= number_to_currency(@list_details.curr_price) %></div>
 
                     <% if user_signed_in? %>
                         <%= form_for @order_item, remote: true do |f| %>
