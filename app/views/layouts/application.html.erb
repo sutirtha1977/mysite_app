@@ -17,13 +17,13 @@
     <%= render 'layouts/app/nav' %> <!-- navigation -->
 
     <% if devise_controller? %>
-      <div class="main">
-        <div class="fullheight" id="devise">
-          <div class="row">
+      <!-- <div class="main"> -->
+        <div id="devise">
+          <!-- <div class="row"> -->
               <%= yield %> <!-- main content -->
-          </div>
+          <!-- </div> -->
         </div>
-      </div>
+      <!-- </div> -->
     <% else %>
       <div class="main">
         <%= yield %> <!-- main content -->

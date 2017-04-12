@@ -22,7 +22,11 @@ class ApplicationController < ActionController::Base
 
 private
   def set_locale
-    I18n.locale = 'en-IN'
+    if [RailsAdmin].include?(self.class.parent)
+      I18n.locale = :en
+    else
+      I18n.locale = 'en-IN'
+    end
   end
 
 end

@@ -1,78 +1,33 @@
 #devise {
-	// background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), image-url("main_2.jpg");
-	.form-login {
-		max-width: 500px;
-		margin: 100px auto 0;
-		background: #fff;
-		border: 1px solid;
-		border-radius: 5px;
-
-		h2.form-login-heading {
-			margin: 0;
-			padding: 25px 20px;
-			text-align: center;
-			background: #68dff0;
-			border-radius: 5px 5px 0 0;
-			color: #fff;
-			font-size: 20px;
-			text-transform: uppercase;
-			font-weight: 300;
+	max-width: 500px;
+	min-height: 100px;
+	margin: 100px auto 0;
+	padding: 2em;
+	background: $light;
+	border: 1px solid;
+	border-radius: 1em;	
+	.devise-heading {
+		text-transform: uppercase;
+	}
+	.simple_form {
+		label {
+			float: left;
+			text-align: right;
 		}
-		.login-wrap {
-			padding: 20px;
-			.registration {
-				text-align: center;
+		div.input {
+
+		}
+		div.boolean {
+
+			label {
+
 			}
-			.login-social-link {
-				display: block;
-				margin-top: 20px;
-				margin-bottom: 15px;
-			}
+
+		}
+		input[type='submit'] {
+			clear: both;
 		}
 	}
-}
 
-.centered {
-	text-align: center;
-}
-
-.btn-facebook {
-  	color: #fff;
-  	background-color: #5193ea;
-  	border-color: #2775e2;
-	&:hover,
-	&:focus,
-	&:active {
-	  color: #fff;
-	  background-color: #2775e2;
-	  border-color: #2775e2;
-	}
-}
-
-
-.btn-twitter {
-	color: #fff;
-	background-color: #44ccfe;
-	border-color: #2bb4e8;
-	&:hover,
-	&:focus,
-	&:active {
-	  color: #fff;
-	  background-color: #2bb4e8;
-	  border-color: #2bb4e8;
-	}
-}
-
-.btn-theme {
-	color: #fff;
-	background-color: #68dff0;
-	border-color: #48bcb4;
-	&:hover,
-	&:focus,
-	&:active {
-	  color: #fff;
-	  background-color: #48bcb4;
-	  border-color: #48bcb4;
-	}
 }
 
